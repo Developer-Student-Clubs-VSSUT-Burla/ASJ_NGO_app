@@ -43,7 +43,9 @@ class Profile_Dhairya : AppCompatActivity() {
                 i.inputType=InputType.TYPE_NULL
 
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+
+            if(imm.isAcceptingText)
+                imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
         }
 
         edit=1-edit
