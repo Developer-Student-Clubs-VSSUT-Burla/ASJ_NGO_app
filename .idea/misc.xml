@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/zapp/ASJ_NGO_app/app/src/main/res/drawable/suraj1.xml" value="0.2703125" />
+        <entry key="..\:/zapp/ASJ_NGO_app/app/src/main/res/drawable/suraj2.xml" value="0.2703125" />
+        <entry key="..\:/zapp/ASJ_NGO_app/app/src/main/res/layout/activity_joining_form_suraj.xml" value="0.16893115942028986" />
+        <entry key="..\:/zapp/ASJ_NGO_app/app/src/main/res/layout/activity_main.xml" value="0.24139492753623187" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2798913043478261" />
       </map>
     </option>
