@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NGOFinder">
+        android:theme="@style/AppTheme">
         <activity
+            android:name=".NgoProfile_Dhairya"
+            android:exported="false" />
 
+        <activity
             android:name=".JoiningForm_Suraj"
-            android:exported="false" >
-           </activity>
-         <activity
+            android:exported="false" />
+        <activity
             android:name=".Profile_Dhairya"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".ui.CreateNGO_swapnil"
             android:exported="false" />
