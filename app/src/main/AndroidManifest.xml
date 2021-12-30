@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NGOFinder">
         <activity
+
+            android:name=".JoiningForm_Suraj"
+            android:exported="false" >
+           </activity>
+         <activity
             android:name=".Profile_Dhairya"
             android:exported="false" >
 

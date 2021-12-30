@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_chat_fragment_to_join_fragment2" type="id" />
+    <item name="action_chat_fragment_to_donate_fragment2" type="id" />
+    <item name="action_donate_fragment_to_join_fragment2" type="id" />
+    <item name="action_donate_fragment_to_chat_fragment2" type="id" />
+    <item name="action_join_fragment_to_donate_fragment" type="id" />
+    <item name="action_join_fragment_to_chat_fragment2" type="id" />
+</resources>
