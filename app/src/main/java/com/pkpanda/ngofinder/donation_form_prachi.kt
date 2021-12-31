@@ -8,6 +8,4 @@ class donation_form_prachi : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.donation_form_activity_prachi)
     }
-
-
 }
