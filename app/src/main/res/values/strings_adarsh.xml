@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">ASJ_UI</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">AAP</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help">Let\'s Help\nEach Other</string>
+    <string name="on_description">When we give cheerfully and accept\ngratefully, everyone is blessed</string>
+    <string name="description">When we give cheerfully and accept gratefully, everyone is blessed</string>
+    <string name="love">Spreading\nLove</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -100,6 +103,9 @@
     <string name="join_now">Join Now</string>
     <string name="nearby_ngos">Nearby NGOs</string>
     <string name="see_all">See All</string>
+    <string name="get_started">Get Started</string>
+    <string name="about_us">About Us</string>
+    <string name="search">Search</string>
 
     <string-array name="Home_Details">
         <item name="Details1">Details 1</item>
