@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context=".NgoProfile_Dhairya">
+    tools:context=".fragments_adarsh.ngo_Profile">
 
 
     <ImageButton
@@ -16,6 +16,7 @@
         android:layout_marginTop="30dp"
         android:background="#FFFFFF"
         android:contentDescription="TODO"
+        android:onClick="back"
         android:src="@drawable/ic_back_ngo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +32,7 @@
         android:src="@drawable/ic_share"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btBack"
+        app:layout_constraintStart_toEndOf="@id/btBack"
         app:layout_constraintTop_toTopOf="@+id/btBack"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -64,7 +65,7 @@
         android:layout_marginEnd="30dp"
         app:cardCornerRadius="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivGal1"
+        app:layout_constraintStart_toEndOf="@id/ivGal1"
         app:layout_constraintTop_toTopOf="@+id/ivGal1">
 
         <ImageView
