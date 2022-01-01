@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.pkpanda.ngofinder.onBoarding_adarsh.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash_adarsh" >
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingPagerFragment"
+            app:destination="@id/onboardingPagerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingPagerFragment"
+        android:name="com.pkpanda.ngofinder.onBoarding_adarsh.OnboardingPagerFragment"
+        android:label="fragment_onboarding_pager"
+        tools:layout="@layout/fragment_onboarding_pager_adarsh" >
+        <action
+            android:id="@+id/action_onboardingPagerFragment_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/onboardingPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabbedFragment"
+        android:name="com.pkpanda.ngofinder.TabbedFragment"
+        android:label="fragment_tabbed"
+        tools:layout="@layout/fragment_tabbed_adarsh" >
+        <action
+            android:id="@+id/action_tabbedFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.pkpanda.ngofinder.AboutFragment_adarsh"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about_adarsh" />
+</navigation>
