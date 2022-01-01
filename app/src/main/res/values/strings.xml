@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="donation_form">Donation Form</string>
+    <string name="back">Back</string>
+    <string name="details">Details................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</string>
+
 </resources>
