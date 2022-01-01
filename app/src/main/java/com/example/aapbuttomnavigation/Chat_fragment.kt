@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.pkpanda.ngofinder.R
 import kotlinx.android.synthetic.main.fragment_chat_fragment.view.*
 
 // TODO: Rename parameter arguments, choose names that match
