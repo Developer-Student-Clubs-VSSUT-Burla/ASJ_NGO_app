@@ -10,14 +10,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.asjapp.R
-import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentRegisterBinding
 import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.SignupResponse
-import com.example.asjapp.retrofit.User
-import com.pkpanda.ngofinder.database.UserDatabase
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import com.example.asjapp.retrofit.UserRegister
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -40,10 +36,15 @@ class RegisterFragment : Fragment() {
                 &&binding.email.text.toString().isNotEmpty()
                 &&binding.password.text.toString().isNotEmpty()){
 
+                var name= binding.fullName.text.toString()
+
+                var uname= binding.number.text.toString()
+
                 var email = binding.email.text.toString()
+
                 var pass= binding.password.text.toString()
 
-                var user = User(email,pass)
+                var user = UserRegister(name,uname,email,pass)
 
                 var signupResponseCall = ApiClient.userService.registerUser(user)
 
@@ -68,7 +69,7 @@ class RegisterFragment : Fragment() {
 
                             Toast.makeText(context,"Logged in!", Toast.LENGTH_SHORT).show()
 
-                            findNavController().navigate(R.id.action_registerFragment_to_tabbedFragment)
+                            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                             isLoginFinished()
 
 

@@ -56,7 +56,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        lifecycleScope.launch{
+//        GlobalScope.launch{
 //            context?.let {
 //
 //                users= UserDatabase(it).getUserDao().getUser()

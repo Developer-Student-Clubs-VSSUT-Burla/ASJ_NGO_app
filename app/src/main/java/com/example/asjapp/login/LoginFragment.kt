@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.LoginResponse
-import com.example.asjapp.retrofit.User
+import com.example.asjapp.retrofit.UserLogin
 import com.example.asjapp.R
 import com.example.asjapp.databinding.FragmentLoginBinding
 import retrofit2.Callback
@@ -37,7 +37,7 @@ class LoginFragment : Fragment() {
                 val email = binding.email.text.toString()
                 val password = binding.password.text.toString()
 
-                val user = User(email, password)
+                val user = UserLogin(email, password)
 
                 val loginResponseCall = ApiClient.userService.loginUser(user)
 
@@ -48,12 +48,12 @@ class LoginFragment : Fragment() {
                         response: retrofit2.Response<LoginResponse?>
                     ) {
                         if (response.isSuccessful) {
-                            Log.d("testing", response.body().toString())
+                            Log.d("test", response.body().toString())
 
 //                            save user info to local db
 //                            GlobalScope.launch {
 //                                context?.let {
-//                                    var user: UserEntity = UserEntity(1,response.body()?.name.toString(),response.body()?.email.toString(),response.body()?.bio.toString(),response.body()?.token.toString())
+//                                    var user: UserEntity = UserEntity(1,response.body()?.full_name.toString(),response.body()?.email.toString(),"Enter bio",response.body()?.token.toString())
 //                                    UserDatabase(it).getUserDao().addUser(user)
 //                                }
 //                            }
@@ -93,8 +93,6 @@ class LoginFragment : Fragment() {
         binding.register.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
-
-
 
         return view
     }

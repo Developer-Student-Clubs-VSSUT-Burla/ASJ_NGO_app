@@ -14,7 +14,7 @@ object ApiClient {
                 OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
             return Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://reqres.in/")
+                .baseUrl("https://asj-ngo-api.herokuapp.com/")
                 .client(okHttpClient)
                 .build()
         }
