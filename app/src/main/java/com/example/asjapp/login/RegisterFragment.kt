@@ -65,7 +65,7 @@ class RegisterFragment : Fragment() {
                                 }
                             }
                             Toast.makeText(context,"Logged in!", Toast.LENGTH_SHORT).show()
-                            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+                            findNavController().navigate(R.id.action_registerFragment_to_tabbedFragment)
                             isLoginFinished()
                         }
                         else{
