@@ -11,9 +11,13 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.LoginResponse
-import com.example.asjapp.retrofit.User
+import com.example.asjapp.retrofit.UserLogin
 import com.example.asjapp.R
+import com.example.asjapp.database.UserDatabase
+import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentLoginBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Callback
 
 private var _binding: FragmentLoginBinding? = null
@@ -37,7 +41,7 @@ class LoginFragment : Fragment() {
                 val email = binding.email.text.toString()
                 val password = binding.password.text.toString()
 
-                val user = User(email, password)
+                val user = UserLogin(email, password)
 
                 val loginResponseCall = ApiClient.userService.loginUser(user)
 
@@ -48,17 +52,20 @@ class LoginFragment : Fragment() {
                         response: retrofit2.Response<LoginResponse?>
                     ) {
                         if (response.isSuccessful) {
-                            Log.d("testing", response.body().toString())
-
-//                            save user info to local db
-//                            GlobalScope.launch {
-//                                context?.let {
-//                                    var user: UserEntity = UserEntity(1,response.body()?.name.toString(),response.body()?.email.toString(),response.body()?.bio.toString(),response.body()?.token.toString())
-//                                    UserDatabase(it).getUserDao().addUser(user)
-//                                }
-//                            }
-                            findNavController().navigate(R.id.action_loginFragment_to_tabbedFragment)
-                            isLoginFinished()
+                            Log.d("test", response.body().toString())
+                            GlobalScope.launch {
+                                context?.let {
+                                    val userDetails = UserEntity(
+                                        0,
+                                        response.body()?.full_name.toString(),
+                                        response.body()?.email.toString(),
+                                        response.body()?.token.toString()
+                                    )
+                                    UserDatabase(it).getUserDao().addUser(userDetails)
+                                }
+                            }
+                        findNavController().navigate(R.id.action_loginFragment_to_tabbedFragment)
+                        isLoginFinished()
 
                         } else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)
@@ -93,8 +100,6 @@ class LoginFragment : Fragment() {
         binding.register.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
-
-
 
         return view
     }

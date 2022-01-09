@@ -6,8 +6,8 @@ import retrofit2.http.POST
 interface API {
 
     @POST("api/login/")
-    fun loginUser(@Body user: User): retrofit2.Call<LoginResponse>
+    fun loginUser(@Body userLogin: UserLogin): retrofit2.Call<LoginResponse>
 
     @POST("api/register/")
-    fun registerUser(@Body user: User): retrofit2.Call<SignupResponse>
+    fun registerUser(@Body user: UserRegister): retrofit2.Call<SignupResponse>
 }
