@@ -9,7 +9,7 @@ Our application acts as an intermediary between an NGO and an individual willing
 
 The App asks users to register giving them options to log in as an Organizer or a Volunteer.
 It first lists down the NGOs at a particular location giving access to two types of users of our app ie,
-1.Organiser
+1.Organiser<br>
 2.Volunteer
 Organizer: A profile is made that allows users of the app to browse the details of a particular NGO along with the details of the point of contact.
 The organizer gets access to create, edit and update personal credentials as well as manage information regarding her/his NGO.
