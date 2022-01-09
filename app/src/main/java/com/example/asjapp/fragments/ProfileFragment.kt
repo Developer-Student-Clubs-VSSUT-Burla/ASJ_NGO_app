@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -48,6 +49,12 @@ class ProfileFragment : Fragment() {
         )
 
         binding.btLogout.setOnClickListener {
+            GlobalScope.launch{
+                context?.let {
+                    users= UserDatabase(it).getUserDao().getUser()
+                    user=users.last()
+                }
+            }
             findNavController().navigate(R.id.action_tabbedFragment_to_loginFragment)
             isLoginFinished()
         }
@@ -64,9 +71,8 @@ class ProfileFragment : Fragment() {
         GlobalScope.launch{
             context?.let {
                 users= UserDatabase(it).getUserDao().getUser()
-
-                user=users[0]
-
+                user=users.last()
+                Log.d("TAG", users.toString())
                 withContext(Dispatchers.Main)
                 {
                     evName.setText(user.name)

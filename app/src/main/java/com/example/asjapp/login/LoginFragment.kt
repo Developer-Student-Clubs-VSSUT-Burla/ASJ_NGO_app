@@ -55,6 +55,7 @@ class LoginFragment : Fragment() {
                             Log.d("test", response.body().toString())
                             GlobalScope.launch {
                                 context?.let {
+                                    Log.d("TAG", response.body().toString())
                                     val userDetails = UserEntity(
                                         0,
                                         response.body()?.full_name.toString(),
