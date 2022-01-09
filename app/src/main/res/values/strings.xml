@@ -109,45 +109,55 @@
     <string name="search">Search</string>
 
     <string-array name="Home_Details">
-        <item name="Details1">Details 1</item>
-        <item name="Details2">Details 2</item>
-        <item name="Details3">Details 3</item>
-        <item name="Details4">Details 4</item>
-        <item name="Details5">Details 5</item>
-        <item name="Details6">Details 6</item>
-        <item name="Details7">Details 7</item>
-        <item name="Details8">Details 8</item>
-        <item name="Details9">Details 9</item>
-        <item name="Details10">Details 10</item>
+        <item name="Details1">DALAIPARA</item>
+        <item name="Details2">Hatibari</item>
+        <item name="Details3">MODIPARA</item>
+        <item name="Details4">DHANUPALI</item>
+        <item name="Details5">Gourpali</item>
+        <item name="Details6">Badabahal</item>
+        <item name="Details7">Rairakhol</item>
+        <item name="Details8">JHARUAPARA</item>
+        <item name="Details9">KUCHINDA</item>
+        <item name="Details10">Deogarh</item>
     </string-array>
 
     <string-array name="Home_nameOfTheOrganisation">
-        <item name="NGO1">Name of the NGO \nNGO 1</item>
-        <item name="NGO2">Name of the NGO \nNGO 2</item>
-        <item name="NGO3">Name of the NGO \nNGO 3</item>
-        <item name="NGO4">Name of the NGO \nNGO 4</item>
-        <item name="NGO5">Name of the NGO \nNGO 5</item>
-        <item name="NGO6">Name of the NGO \nNGO 6</item>
-        <item name="NGO7">Name of the NGO \nNGO 7</item>
-        <item name="NGO8">Name of the NGO \nNGO 8</item>
-        <item name="NGO9">Name of the NGO \nNGO 9</item>
-        <item name="NGO10">Name of the NGO \nNGO 10</item>
+        <item name="NGO1">Life And Hope \nDisaster Management</item>
+        <item name="NGO2">Light \nAnimal Husbandry</item>
+        <item name="NGO3">Maa Bhubaneswari \nAnimal Husbandry</item>
+        <item name="NGO4">Pragatipathe \nChildren</item>
+        <item name="NGO5">Prayaas Sambalpur \nYouth Affairs</item>
+        <item name="NGO6">Pya \nScience and Technology</item>
+        <item name="NGO7">Rudrani \nAged/Elderly</item>
+        <item name="NGO8">Yuba Udayana Association \nHuman Rights</item>
+        <item name="NGO9">Sevafoundation \nAnimal Husbandry</item>
+        <item name="NGO10">Sasigram \nArt and Culture</item>
     </string-array>
 
     <string-array name="NGO_Details">
-        <item name="Details1">Details 1</item>
-        <item name="Details2">Details 2</item>
-        <item name="Details3">Details 3</item>
-        <item name="Details4">Details 4</item>
-        <item name="Details5">Details 5</item>
+        <item name="Details1">Dhanupali</item>
+        <item name="Details2">Budharaja</item>
+        <item name="Details3">Sason</item>
+        <item name="Details4">Jharuapara</item>
+        <item name="Details5">Budharaja</item>
+        <item name="Details6">Budharaja</item>
+        <item name="Details7">Jarabaga</item>
+        <item name="Details8">Burla</item>
+        <item name="Details9">DAINCHA</item>
+        <item name="Details10">JHARUAPARA</item>
     </string-array>
 
     <string-array name="NGO_nameOfTheOrganisation">
-        <item name="NGO1">Name of the NGO \nNGO 1</item>
-        <item name="NGO2">Name of the NGO \nNGO 2</item>
-        <item name="NGO3">Name of the NGO \nNGO 3</item>
-        <item name="NGO4">Name of the NGO \nNGO 4</item>
-        <item name="NGO5">Name of the NGO \nNGO 5</item>
+        <item name="NGO1">Adarsha Shishu Mandir \nChildren</item>
+        <item name="NGO2">Ashaa \nAged/Elderly</item>
+        <item name="NGO3">Ashra \nAnimal Husbandry</item>
+        <item name="NGO4">Bajnia \nArt and Culture</item>
+        <item name="NGO5">Bharatiya Pragnapith \nChildren</item>
+        <item name="NGO6">Biswa \nAgriculture</item>
+        <item name="NGO7">Glare \nYouth Affairs</item>
+        <item name="NGO8">Indradhanu Club\nAgriculture</item>
+        <item name="NGO9">Jagruti \nAnimal Husbandry</item>
+        <item name="NGO10">Lahari \nArt and Culture</item>
     </string-array>
 
 
