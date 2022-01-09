@@ -20,25 +20,25 @@ Contributor- This feature allows the volunteer to fill in personal details and s
 
 <h4>FUNCTIONALITY AND CONCEPTS USED</h4>
 
-Live Data and View Model: View Model is used to make the app flexible to changes and the reflected changes in the UI fragments are observed using LiveData.
-Room Database: The user details are stored using Room Database.Also, it is used for user authentication.
-Navigation Library: The bottom navigation in our app is implemented using the navigation library in order to ease out navigation between the Join, Donate and Chat options as separate fragments in our app.
-Retrofit for the internet: The network requests to the API are done using the Retrofit library. When a user logs in or registers, the API returns a token that gets stored in the room database.On every subsequent request made, the token is passed as an authorization header using Retrofit in order to get other authentication datas like user profile details.
-Recycler view: Recycler view is used to make the app lightweight. It is used to list down the NGOs in our app. Also,the horizontally scrollable gallery in the profile section of our app is created using the Recycler view.
-setImageResource():This function is used in the  recyclerView adapters to bind the images.It was implemented while working with images.
-GSON lib: .In our app it is used with retrofit to convert JSON into Kotlin objects for smooth transmission for data between server and our application.
-All the pages were implemented using Fragments and to prevent implementation of functions on the main thread, Coroutines were used.
+Live Data and View Model: View Model is used to make the app flexible to changes and the reflected changes in the UI fragments are observed using LiveData.<br>
+Room Database: The user details are stored using Room Database.Also, it is used for user authentication.<br>
+Navigation Library: The bottom navigation in our app is implemented using the navigation library in order to ease out navigation between the Join, Donate and Chat options as separate fragments in our app.<br>
+Retrofit for the internet: The network requests to the API are done using the Retrofit library. When a user logs in or registers, the API returns a token that gets stored in the room database.On every subsequent request made, the token is passed as an authorization header using Retrofit in order to get other authentication datas like user profile details.<br>
+Recycler view: Recycler view is used to make the app lightweight. It is used to list down the NGOs in our app. Also,the horizontally scrollable gallery in the profile section of our app is created using the Recycler view.<br>
+setImageResource():This function is used in the  recyclerView adapters to bind the images.It was implemented while working with images.<br>
+GSON lib: .In our app it is used with retrofit to convert JSON into Kotlin objects for smooth transmission for data between server and our application.<br>
+All the pages were implemented using Fragments and to prevent implementation of functions on the main thread, Coroutines were used.<br>
 
 <h4>APPLICATION AND FUTURE SCOPE</h4>
 
 
-The app is yet to be modified to be used in a broader spectrum.
-The organiser mode is yet to be worked on and is presently on the server side.
+The app is yet to be modified to be used in a broader spectrum.<br>
+The organiser mode is yet to be worked on and is presently on the server side.<br>
 You can access the link here:
 [......] 
-
-We wish to further work on improvising our app, add some advanced features enabling chat and video features to work thus making it more flexible.Further,we plan to collaborate with a few local NGOs so that it can be widely used serving the purpose.
-We aim to associate our app with the National Service Scheme(NSS) group at our University who will be responsible for testing and providing us with improved scalability thus making our app ready for a robust launch to be service-ready.
+<br>
+We wish to further work on improvising our app, add some advanced features enabling chat and video features to work thus making it more flexible.Further,we plan to collaborate with a few local NGOs so that it can be widely used serving the purpose.<br>
+We aim to associate our app with the National Service Scheme(NSS) group at our University who will be responsible for testing and providing us with improved scalability thus making our app ready for a robust launch to be service-ready.<br>
 This app is definitely going to help the NGOs connect with contributors heading towards a more charitable society.
 
 
