@@ -1,5 +1,4 @@
-package com.pkpanda.ngofinder.database
-
+package com.example.asjapp.database
 
 import android.content.Context
 import androidx.room.Database

@@ -84,65 +84,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password" />
 
-    <TextView
-        android:id="@id/with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/open_sans"
-        android:text="or continue with"
-        android:textColor="#9CA5BB"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Continue" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/google"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/sign_rectangle"
-        android:fontFamily="@font/nunito_bold"
-        android:gravity="center"
-        android:padding="18dp"
-        android:text="Sign in with Google"
-        android:textAllCaps="false"
-        android:textColor="#1877F2"
-        android:textSize="18sp"
-        app:drawableLeftCompat="@drawable/ic_logo_google"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/with" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/apple"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/sign_rectangle"
-        android:fontFamily="@font/nunito_bold"
-        android:gravity="center"
-        android:padding="18dp"
-        android:text="Sign in with Apple"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:drawableLeftCompat="@drawable/ic_apple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/google" />
-
     <LinearLayout
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apple">
+        app:layout_constraintTop_toBottomOf="@+id/Continue">
 
         <TextView
             android:id="@+id/haveAccount"
@@ -170,7 +120,7 @@
             app:cornerRadius="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/haveAccount"
-            app:layout_constraintTop_toBottomOf="@id/apple" />
+/>
 
     </LinearLayout>
 

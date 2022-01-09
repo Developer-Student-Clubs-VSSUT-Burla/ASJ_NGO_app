@@ -13,7 +13,11 @@ import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.LoginResponse
 import com.example.asjapp.retrofit.UserLogin
 import com.example.asjapp.R
+import com.example.asjapp.database.UserDatabase
+import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentLoginBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Callback
 
 private var _binding: FragmentLoginBinding? = null
@@ -49,16 +53,19 @@ class LoginFragment : Fragment() {
                     ) {
                         if (response.isSuccessful) {
                             Log.d("test", response.body().toString())
-
-//                            save user info to local db
-//                            GlobalScope.launch {
-//                                context?.let {
-//                                    var user: UserEntity = UserEntity(1,response.body()?.full_name.toString(),response.body()?.email.toString(),"Enter bio",response.body()?.token.toString())
-//                                    UserDatabase(it).getUserDao().addUser(user)
-//                                }
-//                            }
-                            findNavController().navigate(R.id.action_loginFragment_to_tabbedFragment)
-                            isLoginFinished()
+                            GlobalScope.launch {
+                                context?.let {
+                                    val userDetails = UserEntity(
+                                        0,
+                                        response.body()?.full_name.toString(),
+                                        response.body()?.email.toString(),
+                                        response.body()?.token.toString()
+                                    )
+                                    UserDatabase(it).getUserDao().addUser(userDetails)
+                                }
+                            }
+                        findNavController().navigate(R.id.action_loginFragment_to_tabbedFragment)
+                        isLoginFinished()
 
                         } else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)

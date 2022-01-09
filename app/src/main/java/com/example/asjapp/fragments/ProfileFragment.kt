@@ -12,22 +12,27 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.asjapp.R
+import com.example.asjapp.database.UserDatabase
 import com.example.asjapp.recyclerView.GalleryAdapter
 import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentProfileBinding
 import com.example.asjapp.models.ProfileModel
+import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 private var _binding: FragmentProfileBinding? = null
 private val binding get() = _binding!!
 
 class ProfileFragment : Fragment() {
 
-    val fields: MutableList<EditText> = mutableListOf()
-    lateinit var users: List<UserEntity>
-    lateinit var user: UserEntity
-    var edit = 1
-    val IMAGE_REQUEST_CODE = 1_000
-    val sharedviewModel: ProfileModel by activityViewModels()
+    private val fields: MutableList<EditText> = mutableListOf()
+    private lateinit var users: List<UserEntity>
+    private lateinit var user: UserEntity
+    private val IMAGE_REQUEST_CODE = 1_000
+    private val sharedviewModel: ProfileModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,34 +61,19 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        GlobalScope.launch{
-//            context?.let {
-//
-//                users= UserDatabase(it).getUserDao().getUser()
-//
-//                if(users!=null) {
-//                    user=users[0]
-//
-//                    if (user != null) {
-//                        withContext(Dispatchers.Main)
-//                        {
-//                            evName.setText(user.title)
-//                            evEmail.setText(user.email)
-//                            evBio.setText(user.bio)
-//                        }
-//                    }
-//                }
-//                else
-//                {
-//                    withContext(Dispatchers.Main)
-//                    {
-//                        evName.setText("Enter Name")
-//                        evEmail.setText("Enter Email")
-//                        evBio.setText("Enter Bio")
-//                    }
-//                }
-//            }
-//        }
+        GlobalScope.launch{
+            context?.let {
+                users= UserDatabase(it).getUserDao().getUser()
+
+                user=users[0]
+
+                withContext(Dispatchers.Main)
+                {
+                    evName.setText(user.name)
+                    evEmail.setText(user.email)
+                }
+            }
+        }
 
         fields.addAll(listOf(binding.evName, binding.evEmail, binding.evBio))
         val context = activity
