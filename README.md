@@ -15,8 +15,8 @@ Organizer: A profile is made that allows users of the app to browse the details 
 The organizer gets access to create, edit and update personal credentials as well as manage information regarding her/his NGO.<br>
 
 Volunteer: A volunteer gets in to browse information about different NGOs listed in sorted manner according to the location.This view has two features
-Chat Support/Helpdesk- This helps the volunteer to resolve any kind of queries.
-Contribute- This feature allows the volunteer to fill in personal details and submit an application for contribution.<br>
+Chat Support/Helpdesk- This helps the volunteer to resolve any kind of queries.<br>
+Contributor- This feature allows the volunteer to fill in personal details and submit an application for contribution.<br>
 
 <h4>FUNCTIONALITY AND CONCEPTS USED</h4>
 
