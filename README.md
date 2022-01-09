@@ -8,15 +8,15 @@ Our application acts as an intermediary between an NGO and an individual willing
 <h4>PROPOSED SOLUTION</h4>
 
 The App asks users to register giving them options to log in as an Organizer or a Volunteer.
-It first lists down the NGOs at a particular location giving access to two types of users of our app ie,
+It first lists down the NGOs at a particular location giving access to two types of users of our app ie,<br>
 1.Organiser<br>
-2.Volunteer
+2.Volunteer<br>
 Organizer: A profile is made that allows users of the app to browse the details of a particular NGO along with the details of the point of contact.
-The organizer gets access to create, edit and update personal credentials as well as manage information regarding her/his NGO.
+The organizer gets access to create, edit and update personal credentials as well as manage information regarding her/his NGO.<br>
 
 Volunteer: A volunteer gets in to browse information about different NGOs listed in sorted manner according to the location.This view has two features
 Chat Support/Helpdesk- This helps the volunteer to resolve any kind of queries.
-Contribute- This feature allows the volunteer to fill in personal details and submit an application for contribution.
+Contribute- This feature allows the volunteer to fill in personal details and submit an application for contribution.<br>
 
 <h4>FUNCTIONALITY AND CONCEPTS USED</h4>
 
