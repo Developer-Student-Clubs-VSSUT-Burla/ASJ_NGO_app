@@ -15,4 +15,6 @@ interface UserDao {
     @Update
     suspend fun updateUser(user: UserEntity)
 
+    @Query("DELETE FROM Users WHERE token=:tokenId")
+    suspend fun deleteByTokenId(tokenId: String)
 }

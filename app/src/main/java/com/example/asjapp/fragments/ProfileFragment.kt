@@ -52,7 +52,8 @@ class ProfileFragment : Fragment() {
             GlobalScope.launch{
                 context?.let {
                     users= UserDatabase(it).getUserDao().getUser()
-                    user=users.last()
+                    val token = users.last().token
+                    UserDatabase(it).getUserDao().deleteByTokenId(token)
                 }
             }
             findNavController().navigate(R.id.action_tabbedFragment_to_loginFragment)
@@ -72,7 +73,6 @@ class ProfileFragment : Fragment() {
             context?.let {
                 users= UserDatabase(it).getUserDao().getUser()
                 user=users.last()
-                Log.d("TAG", users.toString())
                 withContext(Dispatchers.Main)
                 {
                     evName.setText(user.name)
