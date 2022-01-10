@@ -106,6 +106,18 @@
         <action
             android:id="@+id/action_ngo_Profile_to_membersFragment"
             app:destination="@id/membersFragment" />
+        <argument
+            android:name="nGOName"
+            app:argType="string"
+            android:defaultValue="Name of the NGO" />
+        <argument
+            android:name="nGODetails"
+            app:argType="string"
+            android:defaultValue="Details" />
+        <argument
+            android:name="nGOLocation"
+            app:argType="string"
+            android:defaultValue="Location" />
     </fragment>
     <fragment
         android:id="@+id/joinFragment"

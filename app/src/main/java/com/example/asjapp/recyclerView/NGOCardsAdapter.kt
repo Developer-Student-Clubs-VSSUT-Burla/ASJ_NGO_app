@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asjapp.R
+import com.example.asjapp.TabbedFragmentDirections
 
 class NGOCardsAdapter(private val name: Array<String>, private val detail: Array<String>) :
     RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() {
@@ -29,8 +30,8 @@ class NGOCardsAdapter(private val name: Array<String>, private val detail: Array
         holder.nameORG.text = currentName
         holder.details.text = currentDetails
         holder.itemView.setOnClickListener {
-            Navigation.createNavigateOnClickListener(R.id.action_tabbedFragment_to_ngo_Profile)
-                .onClick(holder.itemView)
+            val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(currentName,currentDetails)
+            Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
         }
     }
 
