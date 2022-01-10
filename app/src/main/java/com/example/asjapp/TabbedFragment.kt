@@ -30,21 +30,11 @@ class TabbedFragment : Fragment() {
         viewPager.adapter = viewPagerAdapter
         val tabs: TabLayout = binding.tabs
 
-        setHasOptionsMenu(true)
 
         binding.toolbar.setNavigationOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
 
-        binding.toolbar.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.search -> {
-                    // Handle search icon press
-                    true
-                }
-                else -> false
-            }
-        }
 
         binding.navView.setNavigationItemSelectedListener {
             when (it.itemId) {

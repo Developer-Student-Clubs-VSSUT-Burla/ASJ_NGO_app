@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asjapp.R
+import com.example.asjapp.TabbedFragment
+import com.example.asjapp.TabbedFragmentDirections
 
 class HomeCardsAdapter(
     private val name: Array<String>,
@@ -33,8 +35,8 @@ class HomeCardsAdapter(
         holder.nameORG.text = currentName
         holder.details.text = currentDetails
         holder.itemView.setOnClickListener {
-            Navigation.createNavigateOnClickListener(R.id.action_tabbedFragment_to_ngo_Profile)
-                .onClick(holder.itemView)
+            val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(currentName,currentDetails)
+            Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
         }
     }
 

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.asjapp.databinding.FragmentNgoProfileBinding
 import com.example.asjapp.recyclerView.NGOGalleryAdapter
 
@@ -14,6 +15,7 @@ private val binding get() = _binding!!
 
 class NgoProfile : Fragment() {
 
+    private val args: NgoProfileArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +31,11 @@ class NgoProfile : Fragment() {
 
         val adapter3 = NGOGalleryAdapter(galleryPics2)
         binding.NGOGallery.adapter = adapter3
+
+        val name = args.nGOName
+        val details = args.nGODetails
+        binding.tvNgo.text = name
+        binding.tvName.text = details
 
         binding.ibJoin.setOnClickListener {
             findNavController().navigate(R.id.action_ngo_Profile_to_joinFragment)
