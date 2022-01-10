@@ -74,8 +74,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view2"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:elevation="12dp"
@@ -89,7 +89,7 @@
                 <ImageView
                     android:id="@+id/ivPfp"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:scaleType="centerCrop"
@@ -120,7 +120,7 @@
                 android:gravity="center"
                 android:text="Ashish Kumar"
                 android:textColor="#fff"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageButton"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -136,7 +136,7 @@
                 android:gravity="center"
                 android:text="ashishkumar@gmail.com"
                 android:textColor="#fff"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="@+id/evName"
                 app:layout_constraintTop_toBottomOf="@+id/evName"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
@@ -213,7 +213,7 @@
                         android:scrollbars="vertical"
                         android:scrollHorizontally="false"
                         android:singleLine="false"
-                        android:text="Hyy!!.. This is Ashish here. I am a developer and a designer. I am currently contributing to Enigma, Robotics Society, GDSC, GFG,...etc."
+                        android:hint="@string/bio."
                         android:textColor="@color/white"
                         android:textColorHint="#B3F3F3F3"
                         android:textSize="16sp"

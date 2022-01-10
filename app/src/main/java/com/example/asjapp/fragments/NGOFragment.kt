@@ -24,8 +24,9 @@ class NGOFragment : Fragment() {
 
         val names = resources.getStringArray(R.array.NGO_nameOfTheOrganisation)
         val details = resources.getStringArray(R.array.NGO_Details)
+        val fullDetails = resources.getStringArray(R.array.NGO_FullDetails)
 
-        val adapter = NGOCardsAdapter(names, details)
+        val adapter = NGOCardsAdapter(names, details, fullDetails)
         binding.ngoCards.adapter = adapter
 
         return view

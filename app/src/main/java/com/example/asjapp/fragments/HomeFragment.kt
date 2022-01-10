@@ -24,11 +24,10 @@ class HomeFragment : Fragment() {
 
         val names = resources.getStringArray(R.array.Home_nameOfTheOrganisation)
         val details = resources.getStringArray(R.array.Home_Details)
+        val fullDetails = resources.getStringArray(R.array.Home_FullDetails)
 
-        val adapter = HomeCardsAdapter(names, details)
+        val adapter = HomeCardsAdapter(names, details, fullDetails)
         binding.ngoCards.adapter = adapter
-
-
 
         return view
     }

@@ -12,7 +12,8 @@ import com.example.asjapp.TabbedFragmentDirections
 
 class HomeCardsAdapter(
     private val name: Array<String>,
-    private val detail: Array<String>
+    private val detail: Array<String>,
+    private val fullDetail: Array<String>
 ) :
     RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>() {
 
@@ -34,8 +35,9 @@ class HomeCardsAdapter(
         val currentDetails = detail[position]
         holder.nameORG.text = currentName
         holder.details.text = currentDetails
+        val currentFullDetails = fullDetail[position]
         holder.itemView.setOnClickListener {
-            val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(currentName,currentDetails)
+            val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(currentName,currentDetails,currentFullDetails)
             Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
         }
     }

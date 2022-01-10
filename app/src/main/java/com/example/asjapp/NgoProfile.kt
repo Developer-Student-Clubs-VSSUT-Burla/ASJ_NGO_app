@@ -36,8 +36,10 @@ class NgoProfile : Fragment() {
 
         val name = args.nGOName
         val details = args.nGODetails
+        val fullDetails = args.nGOFullDetails
         binding.tvNgo.text = name
         binding.tvName.text = details
+        binding.tvDesc.text = fullDetails
 
         binding.ibJoin.setOnClickListener {
             findNavController().navigate(R.id.action_ngo_Profile_to_joinFragment)
