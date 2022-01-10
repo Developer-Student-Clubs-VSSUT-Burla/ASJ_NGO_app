@@ -19,8 +19,8 @@ Volunteer: A volunteer gets in to browse information about different NGOs listed
 Chat Support/Helpdesk- This helps the volunteer to resolve any kind of queries.<br>
 Contributor- This feature allows the volunteer to fill in personal details and submit an application for contribution.<br>
 
-![appscr](https://user-images.githubusercontent.com/65532996/148739170-e14906c9-52d5-45c7-a5c7-4bfce1b25efe.jpeg)
-
+![appscr](https://user-images.githubusercontent.com/65532996/148741171-831af6a3-3aa5-455e-a50e-aa60d517b515.jpg)
+<br>
 
 <b> FUNCTIONALITY AND CONCEPTS USED </b>
 
