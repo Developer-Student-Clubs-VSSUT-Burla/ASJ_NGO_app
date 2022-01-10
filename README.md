@@ -35,7 +35,7 @@ All the pages were implemented using Fragments and to prevent implementation of 
 The app is yet to be modified to be used in a broader spectrum.<br>
 The organiser mode is yet to be worked on and is presently on the server side.<br>
 You can access the link here:
-[......] 
+<a href="https://drive.google.com/drive/folders/1im1f7it62AK0PkW96h-AUdx0nDBDJwYg?usp=sharing">Download apk</a>
 <br>
 We wish to further work on improvising our app, add some advanced features enabling chat and video features to work thus making it more flexible.Further,we plan to collaborate with a few local NGOs so that it can be widely used serving the purpose.<br>
 We aim to associate our app with the National Service Scheme(NSS) group at our University who will be responsible for testing and providing us with improved scalability thus making our app ready for a robust launch to be service-ready.<br>
