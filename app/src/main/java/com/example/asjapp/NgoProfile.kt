@@ -20,6 +20,8 @@ class NgoProfile : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
+        
+
         val galleryPics2 = intArrayOf(
             R.drawable.screen21, R.drawable.screen24, R.drawable.screen18, R.drawable.screen15
         )

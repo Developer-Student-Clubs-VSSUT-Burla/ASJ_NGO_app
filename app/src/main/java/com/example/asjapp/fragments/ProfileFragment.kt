@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -77,6 +78,7 @@ class ProfileFragment : Fragment() {
                 {
                     evName.setText(user.name)
                     evEmail.setText(user.email)
+                    evBio.setText(user.bio)
                 }
             }
         }
@@ -121,12 +123,15 @@ class ProfileFragment : Fragment() {
                         imm.hideSoftInputFromWindow(view.windowToken, 0)
                 }
 
-//                val updatedUser= UserEntity(user.id,evName.text.toString(),evEmail.text.toString(),evBio.text.toString())
-//                lifecycleScope.launch {
-//                    context?.let{
-//                        UserDatabase(it).getUserDao().updateUser(updatedUser)
-//                    }
-//                }
+
+                GlobalScope.launch{
+                    context?.let {
+                        users= UserDatabase(it).getUserDao().getUser()
+                        user=users.last()
+                        val updatedUser= UserEntity(user.id,evName.text.toString(),evEmail.text.toString(),evBio.text.toString(),user.token)
+                        UserDatabase(it).getUserDao().updateUser(updatedUser)
+                    }
+                }
 
             }
         })
