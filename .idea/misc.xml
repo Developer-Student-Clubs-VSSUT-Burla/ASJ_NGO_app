@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Programming/Android/ASJ_App/app/src/main/res/layout/fragment_profile_adarsh.xml" value="0.264" />
+        <entry key="..\:/Programming/Android/ASJ_NGO_app/app/src/main/res/layout/fragment_login.xml" value="0.1328125" />
+        <entry key="..\:/Programming/Android/ASJ_NGO_app/app/src/main/res/layout/fragment_register.xml" value="0.25317028985507245" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/layout/fragment_ngo__profile.xml" value="0.2" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/layout/fragment_tabbed.xml" value="0.17300724637681159" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/layout/home_items_layout.xml" value="0.14375" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/layout/ngo_gallery_layout.xml" value="0.17300724637681159" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/layout/ngo_items_layout.xml" value="0.2" />
+        <entry key="..\:/Study/ASJ_NGO_app/app/src/main/res/menu/top_app_bar.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable-v24/ic_1.xml" value="0.2814814814814815" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable-v24/ic__.xml" value="0.2814814814814815" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2740740740740741" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable-v24/rectangle.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/custom_input.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/edit.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_apple.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_back.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_back_ngo.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_baseline_arrow_upward_24.xml" value="0.2740740740740741" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_group_16.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_group_42.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2740740740740741" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2740740740740741" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_logo_google.xml" value="0.20462962962962963" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_see_all.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_share.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/ic_submit_button.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/icon.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/drawable/sign_rectangle.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/activity_main_adarsh.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/appbar.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/drawer_header.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_about.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_chat.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_donate.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_home.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_home_adarsh.xml" value="0.21557971014492755" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_join.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_login.xml" value="0.176" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_members.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_ngo.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_ngo__profile.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_onboarding_pager.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_profile_adarsh.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_register.xml" value="0.176" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_screen1.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_screen1_adarsh.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_screen2.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_screen2_adarsh.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_screen3.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_screen3_adarsh.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_splash.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_splash_adarsh.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_tabbed.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/fragment_tabbed_adarsh.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/gallery_layout.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/home_items_layout.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/home_items_layout_adarsh.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/layout.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/memberlayout.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/ngo_gallery_layout.xml" value="0.21331521739130435" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/ngo_items_layout.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/layout/ngo_items_layout_adarsh.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/menu/drawer_header.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/menu/nenu_items.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/menu/top_app_bar.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Ankit/AndroidStudioProjects/ASJ_NGO_app/app/src/main/res/layout/fragment_donate.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/Ankit/AndroidStudioProjects/ASJ_NGO_app/app/src/main/res/layout/fragment_ngo.xml" value="0.4" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_join.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.33229166666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">AAP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help">Let\'s Help\nEach Other</string>
+    <string name="on_description">When we give cheerfully and accept\ngratefully, everyone is blessed</string>
+    <string name="description">When we give cheerfully and accept gratefully, everyone is blessed</string>
+    <string name="love">Spreading\nLove</string>
+
+    <string name="location">Location</string>
+    <string name="details">Details</string>
+    <string name="name_of_ngo">Name of The NGO</string>
+    <string name="hy_buddy">Hy, Buddy</string>
+    <string name="want_to_contribute">Want to\nContribute?</string>
+    <string name="join_your_nearest_ngo">Join your Nearest NGO</string>
+    <string name="join_now">Join Now</string>
+    <string name="nearby_ngos">Nearby NGOs</string>
+    <string name="see_all">See All</string>
+    <string name="get_started">Get Started</string>
+    <string name="about_us">About Us</string>
+    <string name="search">Search</string>
+
+    <string-array name="Home_Details">
+        <item name="Details1">DALAIPARA</item>
+        <item name="Details2">Hatibari</item>
+        <item name="Details3">MODIPARA</item>
+        <item name="Details4">DHANUPALI</item>
+        <item name="Details5">Gourpali</item>
+        <item name="Details6">Badabahal</item>
+        <item name="Details7">Rairakhol</item>
+        <item name="Details8">JHARUAPARA</item>
+        <item name="Details9">KUCHINDA</item>
+        <item name="Details10">Deogarh</item>
+    </string-array>
+
+    <string-array name="Home_FullDetails">
+        <item name="Details1">One of the largest disaster relief organizations in India working actively to provide emergency assistance and long-term solutions to victims of disasters. \n\nAddress: AT/PO- DALAIPARA, DIST-SAMBALPUR, PIN-768001</item>
+        <item name="Details2">We work for vaccination of domestic animals, first-aid camps, Wildlife Rescue and Rehabilitation treatment, treatment to street animal and their rehabilitation, awareness program on caring ness of different animals. Adoptions and Re-homing for homeless and abandoned animals, Awareness Program about animal welfare. \n\nAddress: At/Po-Hatibari, Via-Jujomura, Dist-Sambalpur, Odisha-768105, INDIA</item>
+        <item name="Details3">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details4">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details5">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details6">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details7">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details8">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details9">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details10">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+    </string-array>
+
+    <string-array name="Home_nameOfTheOrganisation">
+        <item name="NGO1">Life And Hope \nDisaster Management</item>
+        <item name="NGO2">Light \nAnimal Husbandry</item>
+        <item name="NGO3">Maa Bhubaneswari \nAnimal Husbandry</item>
+        <item name="NGO4">Pragatipathe \nChildren</item>
+        <item name="NGO5">Prayaas Sambalpur \nYouth Affairs</item>
+        <item name="NGO6">Pya \nScience and Technology</item>
+        <item name="NGO7">Rudrani \nAged/Elderly</item>
+        <item name="NGO8">Yuba Udayana Association \nHuman Rights</item>
+        <item name="NGO9">Sevafoundation \nAnimal Husbandry</item>
+        <item name="NGO10">Sasigram \nArt and Culture</item>
+    </string-array>
+
+    <string-array name="NGO_Details">
+        <item name="Details1">Dhanupali</item>
+        <item name="Details2">Budharaja</item>
+        <item name="Details3">Sason</item>
+        <item name="Details4">Jharuapara</item>
+        <item name="Details5">Budharaja</item>
+        <item name="Details6">Budharaja</item>
+        <item name="Details7">Jarabaga</item>
+        <item name="Details8">Burla</item>
+        <item name="Details9">DAINCHA</item>
+        <item name="Details10">JHARUAPARA</item>
+    </string-array>
+
+    <string-array name="NGO_FullDetails">
+        <item name="Details1">We work for the development of under-privileged children and provide free them education and mid-day meals. \n\nAddress: ADARSHA SHISHU MANDIR, At. Pilakandeipada, N.S.C.B. College Road, PO. Dhanupali, Dist. Sambalpur-768005, ODISHA (INDIA)</item>
+        <item name="Details2">We care for our Older Generations and provide them shelter and care. \n\nAddress: A.N guha Lane, C/O-A.supkar, Ashaa"the Ray Of Hope", Po-Budharaja, Pin-768001</item>
+        <item name="Details3">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details4">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details5">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details6">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details7">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details8">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details9">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+        <item name="Details10">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</item>
+    </string-array>
+
+    <string-array name="NGO_nameOfTheOrganisation">
+        <item name="NGO1">Adarsha Shishu Mandir \nChildren</item>
+        <item name="NGO2">Ashaa \nAged/Elderly</item>
+        <item name="NGO3">Ashra \nAnimal Husbandry</item>
+        <item name="NGO4">Bajnia \nArt and Culture</item>
+        <item name="NGO5">Bharatiya Pragnapith \nChildren</item>
+        <item name="NGO6">Biswa \nAgriculture</item>
+        <item name="NGO7">Glare \nYouth Affairs</item>
+        <item name="NGO8">Indradhanu Club\nAgriculture</item>
+        <item name="NGO9">Jagruti \nAnimal Husbandry</item>
+        <item name="NGO10">Lahari \nArt and Culture</item>
+    </string-array>
+
+
+    <string name="adarsh_kumar_goswami"> Adarsh Kumar Goswami</string>
+    <string name="adarsh23_gmail_com"> adarsh23@gmail.com</string>
+    <string name="view">VIEW</string>
+    <string name="todo">TODO</string>
+    <string name="back">Back</string>
+    <string name="join_applications">Join Applications</string>
+
+    <string name="donation_form">Donation Form</string>
+    <string name="details.">Details ................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</string>
+    <string name="bio.">Enter Your Bio Here................................................................... ............................................................................... ............................................................................... ............................................................................... ..............................................................................</string>
+
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

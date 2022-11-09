@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.asjapp.onBoarding.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingPagerFragment"
+            app:destination="@id/onboardingPagerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingPagerFragment"
+        android:name="com.example.asjapp.onBoarding.OnboardingPagerFragment"
+        android:label="fragment_onboarding_pager"
+        tools:layout="@layout/fragment_onboarding_pager" >
+        <action
+            android:id="@+id/action_onboardingPagerFragment_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/onboardingPagerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardingPagerFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/onboardingPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabbedFragment"
+        android:name="com.example.asjapp.TabbedFragment"
+        android:label="fragment_tabbed"
+        tools:layout="@layout/fragment_tabbed" >
+        <action
+            android:id="@+id/action_tabbedFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_tabbedFragment_to_ngo_Profile"
+            app:destination="@id/ngo_Profile" />
+        <action
+            android:id="@+id/action_tabbedFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/tabbedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.asjapp.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/ngo_Profile"
+        android:name="com.example.asjapp.NgoProfile"
+        android:label="fragment_ngo__profile"
+        tools:layout="@layout/fragment_ngo__profile" >
+        <action
+            android:id="@+id/action_ngo_Profile_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_ngo_Profile_to_joinFragment"
+            app:destination="@id/joinFragment" />
+        <action
+            android:id="@+id/action_ngo_Profile_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:popUpTo="@id/tabbedFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ngo_Profile_to_donateFragment2"
+            app:destination="@id/donateFragment" />
+        <action
+            android:id="@+id/action_ngo_Profile_to_membersFragment"
+            app:destination="@id/membersFragment" />
+        <argument
+            android:name="nGOName"
+            app:argType="string"
+            android:defaultValue="Name of the NGO" />
+        <argument
+            android:name="nGODetails"
+            app:argType="string"
+            android:defaultValue="Details" />
+        <argument
+            android:name="nGOFullDetails"
+            app:argType="string"
+            android:defaultValue="Details......" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinFragment"
+        android:name="com.example.asjapp.JoinFragment"
+        android:label="fragment_join"
+        tools:layout="@layout/fragment_join" >
+        <action
+            android:id="@+id/action_joinFragment_to_ngo_Profile"
+            app:destination="@id/ngo_Profile"
+            app:popUpTo="@id/ngo_Profile"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.asjapp.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_ngo_Profile"
+            app:destination="@id/ngo_Profile"
+            app:popUpTo="@id/ngo_Profile"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/donateFragment"
+        android:name="com.example.asjapp.DonateFragment"
+        android:label="fragment_donate"
+        tools:layout="@layout/fragment_donate" >
+        <action
+            android:id="@+id/action_donateFragment_to_ngo_Profile2"
+            app:destination="@id/ngo_Profile"
+            app:popUpTo="@id/ngo_Profile"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/membersFragment"
+        android:name="com.example.asjapp.MembersFragment"
+        android:label="fragment_members"
+        tools:layout="@layout/fragment_members" >
+        <action
+            android:id="@+id/action_membersFragment_to_ngo_Profile"
+            app:destination="@id/ngo_Profile"
+            app:popUpTo="@id/membersFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.asjapp.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.asjapp.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_tabbedFragment"
+            app:destination="@id/tabbedFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
