@@ -13,6 +13,11 @@ private var _binding: FragmentScreen1Binding? = null
 private val binding get() = _binding!!
 
 class Screen1 : Fragment() {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3f1e1792612391dac10ef5f67bf6df23284cb42c
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +31,10 @@ class Screen1 : Fragment() {
             viewPager?.currentItem = 1
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3f1e1792612391dac10ef5f67bf6df23284cb42c
         return view
     }
 

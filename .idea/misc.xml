@@ -76,8 +76,11 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ASJApp/app/src/main/res/menu/top_app_bar.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Ankit/AndroidStudioProjects/ASJ_NGO_app/app/src/main/res/layout/fragment_donate.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/Ankit/AndroidStudioProjects/ASJ_NGO_app/app/src/main/res/layout/fragment_ngo.xml" value="0.4" />
+<<<<<<< HEAD
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+=======
+>>>>>>> 3f1e1792612391dac10ef5f67bf6df23284cb42c
         <entry key="app/src/main/res/layout/fragment_join.xml" value="0.1765625" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33229166666666665" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1765625" />
