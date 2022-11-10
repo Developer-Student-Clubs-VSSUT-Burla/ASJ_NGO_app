@@ -5,44 +5,54 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asjapp.R
 import com.example.asjapp.TabbedFragment
 import com.example.asjapp.TabbedFragmentDirections
+import com.example.asjapp.databinding.HomeItemsLayoutBinding
+import com.example.asjapp.retrofit.Ngo
 
-class HomeCardsAdapter(
-    private val name: Array<String>,
-    private val detail: Array<String>,
-    private val fullDetail: Array<String>
-) :
-    RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>() {
+class HomeCardsAdapter:RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>() {
 
-    inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val details: TextView = view.findViewById(R.id.details)
-        val nameORG: TextView = view.findViewById(R.id.nameOrg)
-    }
+    inner class ItemViewHolder(val binding:HomeItemsLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val adapterLayout =
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.home_items_layout, parent, false)
+    private val diffCallback= object : DiffUtil.ItemCallback<Ngo>(){
+        override fun areContentsTheSame(oldItem: Ngo, newItem: Ngo): Boolean {
+            return oldItem._id==newItem._id
+        }
 
-        return ItemViewHolder(adapterLayout)
-    }
-
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val currentName = name[position]
-        val currentDetails = detail[position]
-        holder.nameORG.text = currentName
-        holder.details.text = currentDetails
-        val currentFullDetails = fullDetail[position]
-        holder.itemView.setOnClickListener {
-            val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(currentName,currentDetails,currentFullDetails)
-            Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
+        override fun areItemsTheSame(oldItem: Ngo, newItem: Ngo): Boolean {
+            return oldItem==newItem
         }
     }
 
-    override fun getItemCount(): Int {
-        return detail.size
+    private val differ = AsyncListDiffer(this,diffCallback)
+
+    var ngos: List<Ngo>
+        get() = differ.currentList
+        set(value) {differ.submitList(value)}
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+        return ItemViewHolder(HomeItemsLayoutBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        ))
     }
+
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+        holder.binding.apply {
+            val ngo=ngos[position]
+            nameOrg.text=ngo.name
+            location.text=ngo.location
+            details.text=ngo.tagline
+
+
+        }
+    }
+
+    override fun getItemCount()=ngos.size
+
 }
