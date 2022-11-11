@@ -33,8 +33,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
             android:src="@drawable/ic_share"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -121,7 +119,8 @@
             android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvNgo"
-            app:srcCompat="@drawable/ic_group_19" />
+            app:srcCompat="@drawable/ic_group_19"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/imageButton8"
@@ -178,12 +177,12 @@
             android:id="@+id/ibDonation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ibChat"
             app:layout_constraintStart_toEndOf="@+id/ibJoin"
-            app:srcCompat="@drawable/ic_group_16" />
+            app:srcCompat="@drawable/ic_group_16"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/ibChat"
@@ -193,7 +192,8 @@
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="@+id/ibDonation"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_group_15" />
+            app:srcCompat="@drawable/ic_rectangle_1"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/ibJoin"
@@ -203,7 +203,8 @@
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="@+id/ibDonation"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_group_3" />
+            app:srcCompat="@drawable/ic_group_3"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

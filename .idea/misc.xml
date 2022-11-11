@@ -94,6 +94,7 @@
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.26614583333333336" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/drawable/ic_group.xml" value="0.26614583333333336" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/drawable/ic_group_11.xml" value="0.26614583333333336" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/drawable/ic_group_15.xml" value="0.2611111111111111" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/drawable/ic_see_all.xml" value="0.26614583333333336" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/drawable/ic_see_all_ngo.xml" value="0.26614583333333336" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -102,8 +103,11 @@
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_chat.xml" value="0.25" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_create__ngo.xml" value="0.264" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_members.xml" value="0.25" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_ngo.xml" value="0.25" />
-        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_ngo__profile.xml" value="0.25" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_ngo__profile.xml" value="0.2" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_owner_details.xml" value="0.2" />
+        <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_screen1.xml" value="0.25" />
         <entry key="..\:/project/ASJ_NGO_app-main/app/src/main/res/layout/fragment_screen2.xml" value="0.25" />

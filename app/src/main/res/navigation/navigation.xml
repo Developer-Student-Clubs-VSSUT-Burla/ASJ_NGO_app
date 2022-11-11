@@ -201,10 +201,22 @@
         <action
             android:id="@+id/action_registerFragment_to_create_Ngo"
             app:destination="@id/create_Ngo" />
+        <action
+            android:id="@+id/action_registerFragment_to_ownerDetails"
+            app:destination="@id/ownerDetails" />
     </fragment>
     <fragment
         android:id="@+id/create_Ngo"
         android:name="com.example.asjapp.Create_Ngo"
         android:label="fragment_create__ngo"
         tools:layout="@layout/fragment_create__ngo" />
+    <fragment
+        android:id="@+id/ownerDetails"
+        android:name="com.example.asjapp.OwnerDetails"
+        android:label="fragment_owner_details"
+        tools:layout="@layout/fragment_owner_details" >
+        <action
+            android:id="@+id/action_ownerDetails_to_create_Ngo"
+            app:destination="@id/create_Ngo" />
+    </fragment>
 </navigation>

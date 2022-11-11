@@ -85,7 +85,7 @@ class RegisterFragment : Fragment() {
             }
         }
         binding.continue2.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_create_Ngo)
+            findNavController().navigate(R.id.action_registerFragment_to_ownerDetails)
         }
 
         binding.login.setOnClickListener {
