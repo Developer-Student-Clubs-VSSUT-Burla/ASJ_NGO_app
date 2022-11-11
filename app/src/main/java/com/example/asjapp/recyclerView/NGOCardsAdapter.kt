@@ -52,6 +52,7 @@ class NGOCardsAdapter() : RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() 
             tagline.text=ngo.tagline
             details.text=ngo.location
         }
+
     }
 
     override fun getItemCount()=ngos.size

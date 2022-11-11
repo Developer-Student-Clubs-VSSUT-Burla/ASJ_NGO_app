@@ -2,9 +2,11 @@ package com.example.asjapp.recyclerView
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.asjapp.TabbedFragmentDirections
 import com.example.asjapp.databinding.HomeItemsLayoutBinding
 import com.example.asjapp.retrofit.Ngo
 
@@ -42,9 +44,14 @@ class HomeCardsAdapter:RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>() {
             nameOrg.text=ngo.name
             location.text=ngo.location
             details.text=ngo.tagline
-
+            holder.itemView.setOnClickListener {
+                val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(ngo.name,ngo.tagline,ngo.desc,ngo.location)
+                Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
+            }
 
         }
+
+
     }
 
     override fun getItemCount()=ngos.size

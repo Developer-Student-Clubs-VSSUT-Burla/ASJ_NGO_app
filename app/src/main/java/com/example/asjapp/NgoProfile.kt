@@ -22,7 +22,6 @@ class NgoProfile : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        
 
         val galleryPics2 = intArrayOf(
             R.drawable.screen21, R.drawable.screen24, R.drawable.screen18, R.drawable.screen15
@@ -37,9 +36,12 @@ class NgoProfile : Fragment() {
         val name = args.nGOName
         val details = args.nGODetails
         val fullDetails = args.nGOFullDetails
+        val location=args.ngoLocation
+
         binding.tvNgo.text = name
         binding.tvName.text = details
         binding.tvDesc.text = fullDetails
+        binding.imageButton8.text=location
 
         binding.ibJoin.setOnClickListener {
             findNavController().navigate(R.id.action_ngo_Profile_to_joinFragment)

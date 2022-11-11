@@ -118,6 +118,10 @@
             android:name="nGOFullDetails"
             app:argType="string"
             android:defaultValue="Details......" />
+        <argument
+            android:name="ngoLocation"
+            app:argType="string"
+            android:defaultValue="Location" />
     </fragment>
     <fragment
         android:id="@+id/joinFragment"
