@@ -32,13 +32,7 @@ class HomeFragment : Fragment() {
     ): View {
         homeBinding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
-//
-//        val names = resources.getStringArray(R.array.Home_nameOfTheOrganisation)
-//        val details = resources.getStringArray(R.array.Home_Details)
-//        val fullDetails = resources.getStringArray(R.array.Home_FullDetails)
-//
-//        val adapter = HomeCardsAdapter(names, details, fullDetails)
-//        binding.ngoCards.adapter = adapter
+
 
         lifecycleScope.launchWhenCreated {
             val response = try {
