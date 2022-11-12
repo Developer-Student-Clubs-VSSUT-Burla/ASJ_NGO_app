@@ -1,6 +1,6 @@
 package com.example.asjapp.retrofit
 
-data class Ngo(
+data class ResponseNgo(
     val _id: Int,
     val desc: String,
     val location: String,
@@ -8,5 +8,4 @@ data class Ngo(
     val ngo_owner: String,
     val startedAt: String,
     val tagline: String
-
 )

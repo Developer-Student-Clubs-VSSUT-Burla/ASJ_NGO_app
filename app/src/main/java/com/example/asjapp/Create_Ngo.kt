@@ -1,55 +1,81 @@
 package com.example.asjapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import android.widget.Toast
+import com.example.asjapp.databinding.FragmentCreateNgoBinding
+import com.example.asjapp.retrofit.ApiClient
+import com.example.asjapp.retrofit.RequestClass
+import com.example.asjapp.retrofit.ResponseNgo
+import retrofit2.Call
+import retrofit2.Callback
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Create_Ngo.newInstance] factory method to
- * create an instance of this fragment.
- */
-class Create_Ngo : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+private var _binding:  FragmentCreateNgoBinding? = null
+private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create__ngo, container, false)
-    }
+class Create_Ngo : Fragment()
+{
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentCreateNgoBinding.inflate(inflater,container,false)
+        val view = binding.root
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Create_Ngo.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic fun newInstance(param1: String, param2: String) =
-                Create_Ngo().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
+        binding.submit.setOnClickListener()
+        {
+            if(binding.founder.text.toString().isNotEmpty() &&
+                binding.ngoname.text.toString().isNotEmpty() &&
+                binding.location.text.toString().isNotEmpty() &&
+                binding.contact.text.toString().isNotEmpty() &&
+                binding.founder.text.toString().isNotEmpty() &&
+                binding.founder.text.toString().isNotEmpty()
+            )
+            {
+                val owner = binding.founder.text.toString()
+                val name = binding.ngoname.text.toString()
+                val location = binding.location.text.toString()
+                val contact = binding.contact.text.toString()
+                val tagline = binding.tagline.text.toString()
+                val desc = binding.description.text.toString()
+
+                val ngo = RequestClass(desc = desc, location = location, name = name, ngo_owner = owner,tagline = tagline, contact = contact )
+
+                val ngoResponseCall = ApiClient.userService.postNgo(ngo)
+
+                ngoResponseCall.enqueue(object : Callback<ResponseNgo>
+                {
+                    override fun onResponse(
+                        call: retrofit2.Call<ResponseNgo>,
+                        response: retrofit2.Response<ResponseNgo>
+                    ) {
+                        if(response.isSuccessful)
+                        {
+                            Log.d("test", response.body().toString())
+                            Toast.makeText(activity,"Data submitted successfully",Toast.LENGTH_LONG).show()
+                        }
+                        else {
+                            Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)
+                                .show()
+                            Log.d("test", response.body().toString())
+                        }
+                    }
+                    override fun onFailure(call: Call<ResponseNgo>, t: Throwable) {
+                        Toast.makeText(activity,"Something went wrong",Toast.LENGTH_LONG).show()
                     }
                 }
+              )
+            }
+            else
+            {
+                Toast.makeText(activity,"Fill up all the fields",Toast.LENGTH_LONG).show()
+            }
+        }
+        return view
     }
 }

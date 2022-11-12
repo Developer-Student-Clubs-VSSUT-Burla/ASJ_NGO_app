@@ -18,4 +18,11 @@ interface API {
     @GET("/api/ngos/")
     suspend fun getNgos(): Response<List<Ngo>>
 
+    @POST("api/ngos/add/")
+    fun postNgo(@Body requestClass: RequestClass) : retrofit2.Call<ResponseNgo>
+
+    @POST("api/ngoOwners/register/")
+    fun postowner(@Body requestOwner: RequestOwner) : retrofit2.Call<ResponseOwner>
+
+
 }
