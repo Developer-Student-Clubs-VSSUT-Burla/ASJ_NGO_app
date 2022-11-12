@@ -34,7 +34,7 @@ class NGOFragment : Fragment() {
 
         lifecycleScope.launchWhenCreated {
             val response = try {
-                ApiClient.userService.getNgos()
+                ApiClient.userService.getOwnNgos()
             }catch (e:IOException){
                 Log.e(TAG,"IOException, you might not have Internet Connection")
                 return@launchWhenCreated
@@ -43,7 +43,7 @@ class NGOFragment : Fragment() {
                 return@launchWhenCreated
             }
             if(response.isSuccessful && response.body()!=null){
-                NGOCardsAdapter.ngos=response.body()!!
+                NGOCardsAdapter.ownngos= response.body()!!
             }
             else{
                 Log.e(TAG,"Response Not Successful")

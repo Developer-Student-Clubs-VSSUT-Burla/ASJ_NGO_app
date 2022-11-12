@@ -1,38 +1,39 @@
 package com.example.asjapp.recyclerView
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.asjapp.R
 import com.example.asjapp.TabbedFragmentDirections
 import com.example.asjapp.databinding.NgoItemsLayoutBinding
-import com.example.asjapp.retrofit.Ngo
+import com.example.asjapp.retrofit.SubscribedNgo
 
 class NGOCardsAdapter() : RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() {
 
-    inner class NGOViewHolder(val binding:NgoItemsLayoutBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class NGOViewHolder(val binding: NgoItemsLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    private val diffCallback = object : DiffUtil.ItemCallback<Ngo>(){
-        override fun areItemsTheSame(oldItem: Ngo, newItem: Ngo): Boolean {
-            return oldItem==newItem
+    private val diffCallback = object : DiffUtil.ItemCallback<SubscribedNgo>() {
+
+        override fun areItemsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
+            return oldItem._id==newItem._id
         }
 
-        override fun areContentsTheSame(oldItem: Ngo, newItem: Ngo): Boolean {
-            return oldItem._id==newItem._id
+        override fun areContentsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
+            return oldItem == newItem
         }
 
     }
 
-    private val differ= AsyncListDiffer(this,diffCallback)
+    private val differ = AsyncListDiffer(this, diffCallback)
 
-    var ngos: List<Ngo>
+    var ownngos: List<SubscribedNgo>
         get() = differ.currentList
-        set(value) {differ.submitList(value)}
+        set(value) {
+            differ.submitList(value)
+        }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NGOViewHolder {
@@ -47,17 +48,24 @@ class NGOCardsAdapter() : RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() 
 
     override fun onBindViewHolder(holder: NGOViewHolder, position: Int) {
         holder.binding.apply {
-            val ngo=ngos[position]
-            nameOrg.text=ngo.name
-            tagline.text=ngo.tagline
-            details.text=ngo.location
+            val ngo = ownngos[position].ngo_member
+            val ngo_member=ngo[position]
+            nameOrg.text = ngo_member.name
+            tagline.text = ngo_member.tagline
+            details.text = ngo_member.desc
             holder.itemView.setOnClickListener {
-                val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(ngo.name,ngo.tagline,ngo.desc,ngo.location)
-                Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
+                val action =
+                    TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(
+                        ngo_member.name,
+                        ngo_member.tagline,
+                        ngo_member.desc,
+                        ngo_member.location
+                    )
+                Navigation.createNavigateOnClickListener(action)
+                    .onClick(holder.itemView)
             }
         }
-
     }
 
-    override fun getItemCount()=ngos.size
+    override fun getItemCount() = ownngos.size
 }

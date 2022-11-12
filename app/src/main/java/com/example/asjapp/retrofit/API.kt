@@ -18,4 +18,7 @@ interface API {
     @GET("/api/ngos/")
     suspend fun getNgos(): Response<List<Ngo>>
 
+    @GET("api/users/donors/")
+    suspend fun getOwnNgos(): Response<List<SubscribedNgo>>
+
 }
