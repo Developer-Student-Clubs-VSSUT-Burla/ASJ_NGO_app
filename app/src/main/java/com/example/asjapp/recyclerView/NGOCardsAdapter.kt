@@ -51,7 +51,12 @@ class NGOCardsAdapter() : RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() 
             nameOrg.text=ngo.name
             tagline.text=ngo.tagline
             details.text=ngo.location
+            holder.itemView.setOnClickListener {
+                val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(ngo.name,ngo.tagline,ngo.desc,ngo.location)
+                Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
+            }
         }
+
     }
 
     override fun getItemCount()=ngos.size
