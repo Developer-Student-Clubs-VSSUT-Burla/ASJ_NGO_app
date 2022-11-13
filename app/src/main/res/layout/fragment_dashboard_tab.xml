@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dashboardTab">
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/outline"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
+        android:text="Founder Dashboard"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quote"
+        android:text="No one has ever become poor from giving"
+        android:textSize="12sp"
+        android:textColor="#25262d"
+        app:layout_constraintBottom_toTopOf="@id/tabsD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintVertical_bias="0.022"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabsD"
+        style="@style/AppTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quote"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/purple_500"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <View
+        android:id="@+id/lineD"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="#CFCFCF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabsD" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineD" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

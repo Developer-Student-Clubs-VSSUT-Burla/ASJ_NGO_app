@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.asjapp.databinding.FragmentCreateNgoBinding
 import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.RequestClass
@@ -70,11 +71,14 @@ class Create_Ngo : Fragment()
                     }
                 }
               )
+              findNavController().navigate(R.id.action_create_Ngo_to_dashboardTab)
+
             }
             else
             {
                 Toast.makeText(activity,"Fill up all the fields",Toast.LENGTH_LONG).show()
             }
+
         }
         return view
     }

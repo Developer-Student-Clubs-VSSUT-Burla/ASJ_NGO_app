@@ -66,8 +66,7 @@ class OwnerDetails : Fragment() {
                     override fun onFailure(call: Call<ResponseOwner>, t: Throwable) {
                         Toast.makeText(activity,"Something went wrong",Toast.LENGTH_LONG).show()
                     }
-                }
-
+                  }
                 )
                 findNavController().navigate(R.id.action_ownerDetails_to_create_Ngo)
             }
@@ -75,7 +74,6 @@ class OwnerDetails : Fragment() {
             {
                 Toast.makeText(activity,"Fill up all the fields",Toast.LENGTH_LONG).show()
             }
-
 
         }
         return view;
