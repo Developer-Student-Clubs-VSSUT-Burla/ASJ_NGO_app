@@ -34,7 +34,7 @@ class NGOFragment : Fragment() {
 
         lifecycleScope.launchWhenCreated {
             val response = try {
-                ApiClient.userService.getNgos()
+                ApiClient.userService.getOwnNgos()
             }catch (e:IOException){
                 Log.e(TAG,"IOException, you might not have Internet Connection")
                 return@launchWhenCreated
@@ -43,22 +43,24 @@ class NGOFragment : Fragment() {
                 return@launchWhenCreated
             }
             if(response.isSuccessful && response.body()!=null){
-                NGOCardsAdapter.ngos=response.body()!!
+                binding.ngoCards.apply {
+                    NGOCardsAdapter = NGOCardsAdapter(response.body()!!)
+                    adapter = NGOCardsAdapter
+                    layoutManager = LinearLayoutManager(context)
+                }
             }
             else{
                 Log.e(TAG,"Response Not Successful")
             }
         }
-        setupRecyclerView()
+//        setupRecyclerView()
         return view
     }
 
-    private fun setupRecyclerView()= binding.ngoCards.apply {
-        NGOCardsAdapter=NGOCardsAdapter()
-        adapter= NGOCardsAdapter
-        layoutManager= LinearLayoutManager(context)
-
-    }
+////    private fun setupRecyclerView()= binding.ngoCards.apply {
+//
+//
+//    }
 
 //    override fun onDestroyView() {
 //        super.onDestroyView()

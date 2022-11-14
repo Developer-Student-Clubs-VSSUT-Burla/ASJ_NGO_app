@@ -1,5 +1,6 @@
 package com.example.asjapp.recyclerView
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
@@ -44,6 +45,7 @@ class HomeCardsAdapter:RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>() {
             nameOrg.text=ngo.name
             location.text=ngo.location
             details.text=ngo.tagline
+            Log.d("TAG", ngo.toString())
             holder.itemView.setOnClickListener {
                 val action = TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(ngo.name,ngo.tagline,ngo.desc,ngo.location)
                 Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)

@@ -13,16 +13,20 @@ interface API {
     @POST("api/users/register/")
     fun registerUser(@Body user: UserRegister): retrofit2.Call<SignupResponse>
 
-//    @GET("api/ngos/")
 
     @GET("/api/ngos/")
     suspend fun getNgos(): Response<List<Ngo>>
 
+<<<<<<< HEAD
+    @GET("api/users/donors/")
+    suspend fun getOwnNgos(): Response<List<SubscribedNgo>>
+=======
     @POST("api/ngos/add/")
     fun postNgo(@Body requestClass: RequestClass) : retrofit2.Call<ResponseNgo>
 
     @POST("api/ngoOwners/register/")
     fun postowner(@Body requestOwner: RequestOwner) : retrofit2.Call<ResponseOwner>
 
+>>>>>>> 01e67d4c16693d3e160ab695508598afa2f1a5e8
 
 }
