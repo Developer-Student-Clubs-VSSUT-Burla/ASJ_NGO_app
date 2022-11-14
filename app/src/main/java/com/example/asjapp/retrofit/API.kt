@@ -12,7 +12,7 @@ interface API {
 
     @POST("api/users/register/")
     fun registerUser(@Body user: UserRegister): retrofit2.Call<SignupResponse>
-    
+
 
     @GET("/api/ngos/")
     suspend fun getNgos(): Response<List<Ngo>>

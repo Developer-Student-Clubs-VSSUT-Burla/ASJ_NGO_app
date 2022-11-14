@@ -1,71 +1,86 @@
 package com.example.asjapp.recyclerView
 
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.asjapp.R
 import com.example.asjapp.TabbedFragmentDirections
 import com.example.asjapp.databinding.NgoItemsLayoutBinding
 import com.example.asjapp.retrofit.SubscribedNgo
 
-class NGOCardsAdapter() : RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() {
+class NGOCardsAdapter(var ownngos: List<SubscribedNgo>) :
+    RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() {
 
-    inner class NGOViewHolder(val binding: NgoItemsLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root)
 
-    private val diffCallback = object : DiffUtil.ItemCallback<SubscribedNgo>() {
+    var ngoName = Array<String>(ownngos[0].ngo_member!!.size) { "0" }
+    var ngoloc = Array<String>(ownngos[0].ngo_member!!.size) { "0" }
+    var ngotag = Array<String>(ownngos[0].ngo_member!!.size) { "0" }
 
-        override fun areItemsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
-            return oldItem._id==newItem._id
-        }
+    fun setData() {
+        for (i in 0 until ownngos[0].ngo_member!!.size) {
+            ngoName[i] = (ownngos[0].ngo_member?.get(i)!!.name)
+            ngoloc[i] = (ownngos[0].ngo_member?.get(i)!!.location)
+            ngotag[i] = (ownngos[0].ngo_member?.get(i)!!.tagline)
+            Log.d("msg",ngoName[i].toString())
 
-        override fun areContentsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
-            return oldItem == newItem
         }
 
     }
 
-    private val differ = AsyncListDiffer(this, diffCallback)
+    inner class NGOViewHolder(itemView: View) :
+        RecyclerView.ViewHolder(itemView) {
+        var tittle: TextView = itemView.findViewById(R.id.nameOrg)
+        var tag: TextView = itemView.findViewById(R.id.tagline)
+        var loc: TextView = itemView.findViewById(R.id.details)
+    }
 
-    var ownngos: List<SubscribedNgo>
-        get() = differ.currentList
-        set(value) {
-            differ.submitList(value)
-        }
+//    private val diffCallback = object : DiffUtil.ItemCallback<SubscribedNgo>() {
+//
+//        override fun areItemsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
+//            return oldItem._id==newItem._id
+//        }
+//
+//        override fun areContentsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
+//            return oldItem == newItem
+//        }
+//
+//    }
+
+//    private val differ = AsyncListDiffer(this, diffCallback)
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NGOViewHolder {
-        return NGOViewHolder(
-            NgoItemsLayoutBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            )
-        )
+        val v =
+            LayoutInflater.from(parent.context).inflate(R.layout.ngo_items_layout, parent, false)
+        return NGOViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: NGOViewHolder, position: Int) {
-        holder.binding.apply {
-            val ngo = ownngos[position].ngo_member
-            val ngo_member=ngo[position]
-            nameOrg.text = ngo_member.name
-            tagline.text = ngo_member.tagline
-            details.text = ngo_member.desc
-            holder.itemView.setOnClickListener {
-                val action =
-                    TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(
-                        ngo_member.name,
-                        ngo_member.tagline,
-                        ngo_member.desc,
-                        ngo_member.location
-                    )
-                Navigation.createNavigateOnClickListener(action)
-                    .onClick(holder.itemView)
-            }
-        }
+        setData()
+        holder.tittle.text = ngoName[position]
+        holder.tag.text = ngotag[position]
+        holder.loc.text = ngoloc[position]
+//            holder.itemView.setOnClickListener {
+//                val action =
+//                    TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(
+//                        ngo_member.name,
+//                        ngo_member.tagline,
+//                        ngo_member.desc,
+//                        ngo_member.location
+//                    )
+//                Navigation.createNavigateOnClickListener(action)
+//                    .onClick(holder.itemView)
+//            }
+
     }
 
-    override fun getItemCount() = ownngos.size
+    override fun getItemCount() = ngoName.size
+
+
 }
