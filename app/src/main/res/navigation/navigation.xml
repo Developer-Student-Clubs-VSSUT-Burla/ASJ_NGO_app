@@ -209,7 +209,11 @@
         android:id="@+id/create_Ngo"
         android:name="com.example.asjapp.Create_Ngo"
         android:label="fragment_create__ngo"
-        tools:layout="@layout/fragment_create__ngo" />
+        tools:layout="@layout/fragment_create__ngo" >
+        <action
+            android:id="@+id/action_create_Ngo_to_dashboardTab"
+            app:destination="@id/dashboardTab" />
+    </fragment>
     <fragment
         android:id="@+id/ownerDetails"
         android:name="com.example.asjapp.OwnerDetails"
@@ -219,4 +223,26 @@
             android:id="@+id/action_ownerDetails_to_create_Ngo"
             app:destination="@id/create_Ngo" />
     </fragment>
+    <fragment
+        android:id="@+id/dashboardTab"
+        android:name="com.example.asjapp.dashboardTab"
+        android:label="fragment_dashboard_tab"
+        tools:layout="@layout/fragment_dashboard_tab" >
+        <action
+            android:id="@+id/action_dashboardTab_to_owner"
+            app:destination="@id/owner" />
+        <action
+            android:id="@+id/action_dashboardTab_to_ngod"
+            app:destination="@id/ngod" />
+    </fragment>
+    <fragment
+        android:id="@+id/owner"
+        android:name="com.example.asjapp.owner"
+        android:label="fragment_owner"
+        tools:layout="@layout/fragment_owner" />
+    <fragment
+        android:id="@+id/ngod"
+        android:name="com.example.asjapp.ngod"
+        android:label="fragment_ngod"
+        tools:layout="@layout/fragment_ngod" />
 </navigation>

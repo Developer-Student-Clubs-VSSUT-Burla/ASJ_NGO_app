@@ -1,3 +1,5 @@
+@file:Suppress("OverrideDeprecatedMigration")
+
 package com.example.asjapp.fragments
 
 import android.content.Context
@@ -28,6 +30,7 @@ import kotlinx.coroutines.withContext
 private var _binding: FragmentProfileBinding? = null
 private val binding get() = _binding!!
 
+@Suppress("DEPRECATION")
 class ProfileFragment : Fragment() {
 
     private val fields: MutableList<EditText> = mutableListOf()
