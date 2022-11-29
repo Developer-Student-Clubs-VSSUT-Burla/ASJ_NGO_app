@@ -12,6 +12,7 @@ interface UserDao {
     suspend fun getUser(): List<UserEntity>
 
 
+
     @Update
     suspend fun updateUser(user: UserEntity)
 
