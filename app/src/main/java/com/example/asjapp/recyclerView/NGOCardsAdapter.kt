@@ -5,31 +5,60 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.Navigation
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.asjapp.MainActivity
 import com.example.asjapp.R
-import com.example.asjapp.TabbedFragmentDirections
-import com.example.asjapp.databinding.NgoItemsLayoutBinding
 import com.example.asjapp.retrofit.SubscribedNgo
 
-class NGOCardsAdapter(var ownngos: List<SubscribedNgo>) :
+class NGOCardsAdapter(var ownngos: List<SubscribedNgo>, var email_loggedIn: String) :
     RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() {
 
 
-    var ngoName = Array<String>(ownngos[0].ngo_member!!.size) { "0" }
-    var ngoloc = Array<String>(ownngos[0].ngo_member!!.size) { "0" }
-    var ngotag = Array<String>(ownngos[0].ngo_member!!.size) { "0" }
+    fun getIndexUser(): Int {
+        var index: Int = -1;
+        for (i in 0 until ownngos.size) {
+            if (ownngos[i].ngo_user.email == email_loggedIn) {
+                index = i;
+                break
+            }
+        }
+        Log.d("Index", index.toString());
+        return index
+    }
 
-    fun setData() {
-        for (i in 0 until ownngos[0].ngo_member!!.size) {
-            ngoName[i] = (ownngos[0].ngo_member?.get(i)!!.name)
-            ngoloc[i] = (ownngos[0].ngo_member?.get(i)!!.location)
-            ngotag[i] = (ownngos[0].ngo_member?.get(i)!!.tagline)
-            Log.d("msg",ngoName[i].toString())
+    var index = getIndexUser()
+
+
+    var ngoName = Array<String>(if(index!=-1) ownngos[index].ngo_member!!.size else 1) { "Demo" }
+    var ngoloc = Array<String>(if(index!=-1) ownngos[index].ngo_member!!.size else 1) { "Demo" }
+    var ngotag = Array<String>(if(index!=-1) ownngos[index].ngo_member!!.size else 1) { "Demo" }
+
+
+
+    private fun setData() {
+        var index = getIndexUser();
+
+
+
+        if (index != -1) {
+            for (i in ownngos[index].ngo_member!!.indices) {
+                ngoName[i] = (ownngos[index].ngo_member?.get(i)!!.name)
+                ngoloc[i] = (ownngos[index].ngo_member?.get(i)!!.location)
+                ngotag[i] = (ownngos[index].ngo_member?.get(i)!!.tagline)
+
+            }
+            Log.d("Test_1",ngoName.toString())
 
         }
+        else{
+//            Toast.makeText((),"No NGO Available",Toast.LENGTH_SHORT).show();
+            Log.d("Test_1","Hello There")
+
+        }
+
+
+//        Log.d("msg",)
 
     }
 
@@ -40,22 +69,9 @@ class NGOCardsAdapter(var ownngos: List<SubscribedNgo>) :
         var loc: TextView = itemView.findViewById(R.id.details)
     }
 
-//    private val diffCallback = object : DiffUtil.ItemCallback<SubscribedNgo>() {
-//
-//        override fun areItemsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
-//            return oldItem._id==newItem._id
-//        }
-//
-//        override fun areContentsTheSame(oldItem: SubscribedNgo, newItem: SubscribedNgo): Boolean {
-//            return oldItem == newItem
-//        }
-//
-//    }
-
-//    private val differ = AsyncListDiffer(this, diffCallback)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NGOViewHolder {
+
         val v =
             LayoutInflater.from(parent.context).inflate(R.layout.ngo_items_layout, parent, false)
         return NGOViewHolder(v)
@@ -66,18 +82,6 @@ class NGOCardsAdapter(var ownngos: List<SubscribedNgo>) :
         holder.tittle.text = ngoName[position]
         holder.tag.text = ngotag[position]
         holder.loc.text = ngoloc[position]
-//            holder.itemView.setOnClickListener {
-//                val action =
-//                    TabbedFragmentDirections.actionTabbedFragmentToNgoProfile(
-//                        ngo_member.name,
-//                        ngo_member.tagline,
-//                        ngo_member.desc,
-//                        ngo_member.location
-//                    )
-//                Navigation.createNavigateOnClickListener(action)
-//                    .onClick(holder.itemView)
-//            }
-
     }
 
     override fun getItemCount() = ngoName.size
