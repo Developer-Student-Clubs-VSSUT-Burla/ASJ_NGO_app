@@ -45,6 +45,7 @@ class HomeFragment : Fragment() {
                 return@launchWhenCreated
             }
             if(response.isSuccessful && response.body()!=null){
+                Log.d("Response_List", response.body()!!.toString())
                 HomeCardsAdapter.ngos=response.body()!!
             }
             else{

@@ -14,7 +14,7 @@ object ApiClient {
                 OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
             return Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://ngo-drf-backend.herokuapp.com/")
+                .baseUrl("https://itsrajat.pythonanywhere.com/")
                 .client(okHttpClient)
                 .build()
         }
