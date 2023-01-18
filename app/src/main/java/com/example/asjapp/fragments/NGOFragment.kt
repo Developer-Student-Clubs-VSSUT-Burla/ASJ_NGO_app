@@ -53,7 +53,7 @@ class NGOFragment : Fragment() {
                 return@launchWhenCreated
             }
             if(response.isSuccessful && response.body()!=null){
-                Log.d("Response_List",response.body()!![0].ngo_user.username)
+                Log.d("Response_List", response.body()!!.toString())
 
                 binding.ngoCards.apply {
                     NGOCardsAdapter = NGOCardsAdapter(response.body()!!,users.last().email)

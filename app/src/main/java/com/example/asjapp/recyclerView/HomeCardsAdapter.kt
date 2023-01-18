@@ -52,8 +52,6 @@ class HomeCardsAdapter:RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>() {
             }
 
         }
-
-
     }
 
     override fun getItemCount()=ngos.size
