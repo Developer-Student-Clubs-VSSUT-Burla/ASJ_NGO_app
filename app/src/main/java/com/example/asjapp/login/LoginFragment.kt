@@ -13,6 +13,7 @@ import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.LoginResponse
 import com.example.asjapp.retrofit.UserLogin
 import com.example.asjapp.R
+import com.example.asjapp.database.SessionManager
 import com.example.asjapp.database.UserDatabase
 import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentLoginBinding
@@ -22,8 +23,10 @@ import retrofit2.Callback
 
 private var _binding: FragmentLoginBinding? = null
 private val binding get() = _binding!!
+lateinit var token: String
 
 class LoginFragment : Fragment() {
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +35,7 @@ class LoginFragment : Fragment() {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
-
+        sessionManager = SessionManager(requireContext())
         binding.Continue.setOnClickListener {
 
             if (binding.email.text.toString().isNotEmpty() && binding.password.text.toString()
@@ -50,24 +53,30 @@ class LoginFragment : Fragment() {
                     override fun onResponse(
                         call: retrofit2.Call<LoginResponse?>,
                         response: retrofit2.Response<LoginResponse?>
+
                     ) {
                         if (response.isSuccessful) {
                             Log.d("test", response.body().toString())
+
                             GlobalScope.launch {
                                 context?.let {
-                                    Log.d("TAG", response.body().toString())
+
                                     val userDetails = UserEntity(
                                         0,
-                                        response.body()?.full_name.toString(),
+                                        response.body()?.name.toString(),
                                         response.body()?.email.toString(),
                                         "Enter bio".toString(),
                                         response.body()?.token.toString()
                                     )
+
                                     UserDatabase(it).getUserDao().addUser(userDetails)
+
                                 }
                             }
-                        findNavController().navigate(R.id.action_loginFragment_to_tabbedFragment)
-                        isLoginFinished()
+                            sessionManager.saveAuthToken(response.body()?.token.toString())
+                            Log.d("Response_User_List", response.body().toString())
+                            findNavController().navigate(R.id.action_loginFragment_to_tabbedFragment)
+                            isLoginFinished()
 
                         } else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)

@@ -16,4 +16,4 @@ data class UserEntity(
     val bio:String,
     @ColumnInfo(name = "token")
     val token: String
-)
+    )
