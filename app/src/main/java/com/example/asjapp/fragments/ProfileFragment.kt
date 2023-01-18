@@ -20,6 +20,7 @@ import com.example.asjapp.database.UserDatabase
 import com.example.asjapp.recyclerView.GalleryAdapter
 import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentProfileBinding
+import com.example.asjapp.login.token
 import com.example.asjapp.models.ProfileModel
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.coroutines.Dispatchers
@@ -75,8 +76,11 @@ class ProfileFragment : Fragment() {
 
         GlobalScope.launch{
             context?.let {
+
                 users= UserDatabase(it).getUserDao().getUser()
+
                 user=users.last()
+                token=user.token
                 withContext(Dispatchers.Main)
                 {
                     evName.setText(user.name)
