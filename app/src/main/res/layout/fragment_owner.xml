@@ -6,14 +6,170 @@
     android:layout_height="match_parent"
     tools:context=".owner">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OWNER DETAILS"
+        android:orientation="vertical"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01">
+
+
+        <TextView
+            android:id="@+id/textViefgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Username"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ousername"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
+            android:paddingStart="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Full Name"
+                android:textColor="@color/Dark_blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/oname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
+            android:gravity=""
+            android:textSize="18sp"
+            android:paddingStart="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Email"
+                android:textColor="@color/Dark_blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/oemail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
+            android:paddingStart="25dp" />
+
+        <TextView
+            android:id="@+id/tertVfek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Date of Birth"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/odob"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
+            android:paddingStart="25dp" />
+
+        <TextView
+            android:id="@+id/textVfek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Joined Date"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ojoineddate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
+            android:paddingStart="25dp" />
+
+        <TextView
+            android:id="@+id/texhyVfek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Address"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/oaddress"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
+            android:paddingStart="25dp" />
+
+        <TextView
+            android:id="@+id/tedtVfek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="City"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ocity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/shadow_button"
+            android:gravity="center"
+            android:paddingStart="25dp" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
