@@ -1,3 +1,3 @@
 package com.example.asjapp.retrofit
 
-data class SignupResponse(var full_name:String,var email:String,var token: String)
+data class SignupResponse(var full_name:String,var email:String,var token: String,var _id:String)

@@ -240,6 +240,12 @@
         <action
             android:id="@+id/action_dashboardTab_to_ngod"
             app:destination="@id/ngod" />
+        <argument
+            android:name="ownerId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dashboardTab_to_ngod2"
+            app:destination="@id/ngod" />
     </fragment>
     <fragment
         android:id="@+id/owner"
@@ -250,7 +256,11 @@
         android:id="@+id/ngod"
         android:name="com.example.asjapp.ngod"
         android:label="fragment_ngod"
-        tools:layout="@layout/fragment_ngod" />
+        tools:layout="@layout/fragment_ngod" >
+        <argument
+            android:name="ownerId"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/ownerLoginFragment"
         android:name="com.example.asjapp.OwnerLoginFragment"
