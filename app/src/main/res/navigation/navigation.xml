@@ -225,6 +225,9 @@
         <action
             android:id="@+id/action_ownerDetails_to_create_Ngo"
             app:destination="@id/create_Ngo" />
+        <action
+            android:id="@+id/action_ownerDetails_to_ownerLoginFragment"
+            app:destination="@id/ownerLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardTab"
@@ -248,4 +251,13 @@
         android:name="com.example.asjapp.ngod"
         android:label="fragment_ngod"
         tools:layout="@layout/fragment_ngod" />
+    <fragment
+        android:id="@+id/ownerLoginFragment"
+        android:name="com.example.asjapp.OwnerLoginFragment"
+        android:label="fragment_owner_login"
+        tools:layout="@layout/fragment_owner_login" >
+        <action
+            android:id="@+id/action_ownerLoginFragment_to_dashboardTab"
+            app:destination="@id/dashboardTab" />
+    </fragment>
 </navigation>
