@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
-    tools:context=".login.RegisterFragment">
+    tools:context=".OwnerLoginFragment">
 
     <TextView
         android:id="@+id/appName"
@@ -22,12 +22,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/signUp"
+        android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Sign Up"
+        android:text="Owner Sign In"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -36,69 +36,38 @@
         app:layout_constraintTop_toBottomOf="@id/appName" />
 
     <EditText
-        android:id="@+id/fullName"
+        android:id="@+id/owner_login_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/sign_rectangle"
         android:fontFamily="@font/open_sans"
         android:gravity="center"
-        android:hint="Enter Full Name"
+        android:hint="Username"
         android:padding="20dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUp" />
+        app:layout_constraintTop_toBottomOf="@+id/signIn" />
 
     <EditText
-        android:id="@+id/number"
+        android:id="@+id/owner_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/sign_rectangle"
         android:fontFamily="@font/open_sans"
         android:gravity="center"
-        android:hint="Enter Username"
-        android:inputType="text"
-        android:padding="20dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullName" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/sign_rectangle"
-        android:fontFamily="@font/open_sans"
-        android:gravity="center"
-        android:hint="Your Email"
-        android:padding="20dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/sign_rectangle"
-        android:fontFamily="@font/open_sans"
-        android:gravity="center"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="20dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/owner_login_email" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/Continue"
+        android:id="@+id/ContinueBtn"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -106,42 +75,24 @@
         android:fontFamily="@font/open_sans"
         android:gravity="center"
         android:padding="20dp"
-        android:text="Sign Up"
+        android:text="Continue"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:cornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/continue2"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="Proceed as Ngo"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:layout_marginTop="5dp"
-        app:cornerRadius="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Continue" />
+        app:layout_constraintTop_toBottomOf="@id/owner_password" />
 
     <LinearLayout
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/continue2">
+        app:layout_constraintTop_toBottomOf="@+id/ContinueBtn">
 
         <TextView
             android:id="@+id/haveAccount"
@@ -150,7 +101,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="@font/open_sans"
             android:gravity="center"
-            android:text="Have Account? "
+            android:text="New User? "
             android:textAllCaps="false"
             android:textColor="#9CA5BB"
             android:textSize="16sp" />
@@ -162,7 +113,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="@font/nunito_bold"
             android:gravity="center"
-            android:text="Login"
+            android:text="Create Account"
             android:textAllCaps="false"
             android:textColor="@color/purple_500"
             android:textSize="16sp"

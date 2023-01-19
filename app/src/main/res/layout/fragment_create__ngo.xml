@@ -45,31 +45,11 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:elevation="10dp"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/founder"
-        app:layout_constraintTop_toBottomOf="@+id/actionbar"
-        tools:layout_editor_absoluteX="20dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/createngo" />
-    </androidx.cardview.widget.CardView>
-
     <EditText
         android:id="@+id/founder"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="250dp"
         android:layout_marginEnd="35dp"
         android:background="@drawable/edit"
         android:ems="10"
@@ -80,35 +60,35 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/ngoname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/actionbar" />
 
     <EditText
         android:id="@+id/location"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
         android:background="@drawable/edit"
         android:ems="10"
         android:hint="Location"
+
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColorHint="#546E7A"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/contact"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ngoname"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/description"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="14dp"
         android:background="@drawable/edit"
         android:ems="10"
         android:hint="Description"
@@ -116,50 +96,68 @@
         android:textAlignment="center"
         android:textColorHint="#546E7A"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintBottom_toTopOf="@+id/creatNgoButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ngoEmail" />
+
+    <EditText
+        android:id="@+id/ngoEmail"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:background="@drawable/edit"
+        android:ems="10"
+        android:hint="Contact Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColorHint="#546E7A"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tagline" />
 
     <EditText
         android:id="@+id/tagline"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:background="@drawable/edit"
         android:ems="10"
-        android:hint="Category"
+        android:hint="Tagline"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColorHint="#546E7A"
         android:textSize="15sp"
         app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintBottom_toTopOf="@+id/ngoEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contact" />
 
     <EditText
         android:id="@+id/contact"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:background="@drawable/edit"
         android:ems="10"
-        android:hint="Contact"
+        android:hint="Contact Phone No"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColorHint="#546E7A"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/tagline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/location"
-        app:layout_constraintVertical_bias="0.608"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/ngoname"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
@@ -168,30 +166,30 @@
         android:hint="NGO Name"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColorHint="#546E7A"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/location"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/founder" />
 
-    <TextView
-        android:id="@+id/submit"
-        android:layout_width="95dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="750dp"
-        android:background="@drawable/submit"
-        android:clickable="true"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/creatNgoButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:gravity="center"
-        android:text="Submit"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="normal"
+        android:padding="20dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornerRadius="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 </androidx.constraintlayout.widget.ConstraintLayout>

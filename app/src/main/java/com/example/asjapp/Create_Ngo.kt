@@ -28,7 +28,7 @@ class Create_Ngo : Fragment()
         _binding = FragmentCreateNgoBinding.inflate(inflater,container,false)
         val view = binding.root
 
-        binding.submit.setOnClickListener()
+        binding.creatNgoButton.setOnClickListener()
         {
             if(binding.founder.text.toString().isNotEmpty() &&
                 binding.ngoname.text.toString().isNotEmpty() &&

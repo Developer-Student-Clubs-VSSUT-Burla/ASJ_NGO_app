@@ -32,6 +32,10 @@ class OwnerDetails : Fragment() {
         _binding = FragmentOwnerDetailsBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        binding.moveOwnerLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_ownerDetails_to_ownerLoginFragment)
+        }
+
         binding.materialButton.setOnClickListener{
             if(binding.ownerName.text.toString().isNotEmpty() &&
                 binding.ownerEmail.text.toString().isNotEmpty() &&
@@ -43,7 +47,7 @@ class OwnerDetails : Fragment() {
                 val passsword = binding.ownerPassword.text.toString()
 
                 val owner = RequestOwner(name = name, email = email, password = passsword)
-                val ownerReponseCall = ApiClient.userService.postowner(owner)
+                val ownerReponseCall = ApiClient.userService.registerNgoOwner(owner)
 
                 ownerReponseCall.enqueue(object : Callback<ResponseOwner>
                 {

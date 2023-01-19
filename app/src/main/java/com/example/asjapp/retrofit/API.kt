@@ -37,7 +37,10 @@ interface API {
     fun postNgo(@Body requestClass: RequestClass): retrofit2.Call<ResponseNgo>
 
     @POST("api/ngoOwners/register/")
-    fun postowner(@Body requestOwner: RequestOwner): retrofit2.Call<ResponseOwner>
+    fun registerNgoOwner(@Body requestOwner: RequestOwner): retrofit2.Call<ResponseOwner>
+
+    @POST("api/ngoOwners/login/")
+    fun loginNgoOwner(@Body userLogin: UserLogin):retrofit2.Call<LoginResponse>
 
     @PUT("/api/users/profile/joinNgo/")
     fun postJoinedNgo(
