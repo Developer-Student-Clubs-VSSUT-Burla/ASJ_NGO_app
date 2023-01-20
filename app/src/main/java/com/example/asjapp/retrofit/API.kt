@@ -48,4 +48,7 @@ interface API {
         @Header("Authorization") token: String
     ): retrofit2.Call<User>
 
+    @GET("api/ngoOwners/")
+    suspend fun getOwnerDetail(@Header("Authorization") token : String) : Response<ResponseOwnerDetailItem>
+
 }
