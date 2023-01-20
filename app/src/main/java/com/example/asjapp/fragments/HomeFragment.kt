@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
 
         lifecycleScope.launchWhenCreated {
             val response = try {
-                ApiClient.userService.getNgos()
+                ApiClient.userService.getNgos(owner = "")
             }catch (e:IOException){
                 Log.e(TAG,"IOException, you might not have Internet Connection")
                 return@launchWhenCreated
