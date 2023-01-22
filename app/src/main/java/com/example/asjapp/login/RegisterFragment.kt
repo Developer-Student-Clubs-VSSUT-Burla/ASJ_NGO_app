@@ -61,7 +61,7 @@ class RegisterFragment : Fragment() {
                                         response.body()?.email.toString(),
                                         "Enter bio".toString(),
                                         response.body()?.token.toString(),
-                                        response.body()?._id!!
+                                        response.body()?._id.toString()
                                     )
                                     UserDatabase(it).getUserDao().addUser(userDetails)
                                 }

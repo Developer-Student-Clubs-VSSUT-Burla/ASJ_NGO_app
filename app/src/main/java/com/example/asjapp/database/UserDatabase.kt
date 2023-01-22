@@ -33,7 +33,7 @@ abstract class UserDatabase : RoomDatabase() {
             context.applicationContext,
             UserDatabase::class.java,
             "userdatabase"
-        ).fallbackToDestructiveMigration()
+        )
             .build()
 
     }
