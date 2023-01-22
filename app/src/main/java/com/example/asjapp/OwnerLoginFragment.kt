@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.asjapp.database.SessionManager
 import com.example.asjapp.database.UserDatabase
@@ -62,7 +63,8 @@ class OwnerLoginFragment : Fragment() {
                                         response.body()?.name.toString(),
                                         response.body()?.email.toString(),
                                         "Enter bio".toString(),
-                                        response.body()?.token.toString()
+                                        response.body()?.token.toString(),
+                                        response.body()?._id!!.toString()
                                     )
                                     UserDatabase(it).getUserDao().addUser(userDetails)
                                 }
@@ -70,7 +72,12 @@ class OwnerLoginFragment : Fragment() {
                             sessionManager.saveAuthToken(response.body()?.token.toString())
                             Toast.makeText(activity, "Logged In", Toast.LENGTH_SHORT).show()
                             Log.d("Response_User_List", response.body().toString())
-                            findNavController().navigate(R.id.action_ownerLoginFragment_to_dashboardTab)
+                            val action =
+                                OwnerLoginFragmentDirections.actionOwnerLoginFragmentToDashboardTab(
+                                    response.body()?._id!!.toString()
+                                )
+                            findNavController().navigate(action)
+
                         } else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)
                                 .show()

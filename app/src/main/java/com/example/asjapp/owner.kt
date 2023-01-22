@@ -48,6 +48,7 @@ class owner : Fragment() {
                 return@launchWhenCreated
             }
 
+
             if(response.isSuccessful && response.body()!=null){
                 binding.progressBar.visibility = View.GONE
                 Toast.makeText(activity, "Got it", Toast.LENGTH_SHORT).show()

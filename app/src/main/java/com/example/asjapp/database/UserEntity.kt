@@ -12,8 +12,10 @@ data class UserEntity(
     val name: String,
     @ColumnInfo(name = "email")
     val email: String,
-    @ColumnInfo(name="bio")
-    val bio:String,
+    @ColumnInfo(name = "bio")
+    val bio: String,
     @ColumnInfo(name = "token")
-    val token: String
-    )
+    val token: String,
+    @ColumnInfo(name = "uId")
+    val uId: String
+)

@@ -10,7 +10,7 @@ import com.example.asjapp.database.UserEntity
 
 @Database(
     entities = [UserEntity::class],
-    version = 2
+    version = 3
 )
 @TypeConverters(Converters::class)
 abstract class UserDatabase : RoomDatabase() {
@@ -33,7 +33,8 @@ abstract class UserDatabase : RoomDatabase() {
             context.applicationContext,
             UserDatabase::class.java,
             "userdatabase"
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
 
     }
 }

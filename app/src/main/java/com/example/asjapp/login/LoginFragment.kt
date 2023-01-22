@@ -66,7 +66,9 @@ class LoginFragment : Fragment() {
                                         response.body()?.name.toString(),
                                         response.body()?.email.toString(),
                                         "Enter bio".toString(),
-                                        response.body()?.token.toString()
+                                        response.body()?.token.toString(),
+                                        response.body()?._id!!.toString()
+
                                     )
 
                                     UserDatabase(it).getUserDao().addUser(userDetails)

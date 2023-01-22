@@ -237,6 +237,13 @@
         <action
             android:id="@+id/action_dashboardTab_to_ngod"
             app:destination="@id/ngod" />
+        <argument
+            android:name="ownerId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dashboardTab_to_ngod2"
+            app:destination="@id/ngod" />
+
         <action
             android:id="@+id/action_dashboardTab_to_create_Ngo"
             app:destination="@id/create_Ngo" />
@@ -251,6 +258,10 @@
         android:name="com.example.asjapp.ngod"
         android:label="fragment_ngod"
         tools:layout="@layout/fragment_ngod" >
+        <argument
+            android:name="ownerId"
+            app:argType="integer" />
+=======
         <action
             android:id="@+id/action_ngod_to_create_Ngo"
             app:destination="@id/create_Ngo" />

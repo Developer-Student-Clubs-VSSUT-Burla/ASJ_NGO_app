@@ -135,7 +135,7 @@ class ProfileFragment : Fragment() {
                     context?.let {
                         users= UserDatabase(it).getUserDao().getUser()
                         user=users.last()
-                        val updatedUser= UserEntity(user.id,evName.text.toString(),evEmail.text.toString(),evBio.text.toString(),user.token)
+                        val updatedUser= UserEntity(user.id,evName.text.toString(),evEmail.text.toString(),evBio.text.toString(),user.token,user.uId)
                         UserDatabase(it).getUserDao().updateUser(updatedUser)
                     }
                 }

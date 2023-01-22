@@ -57,6 +57,7 @@ class NGOFragment : Fragment() {
             if(response.isSuccessful && response.body()!=null){
 
                 NGOCardsAdapter.subNgo=response.body()!!.subscribedNgos
+
             }
             else{
                 Log.e("TAG_Error","Response Not Successful")

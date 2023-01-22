@@ -6,6 +6,7 @@ import com.example.asjapp.database.SessionManager
 import com.example.asjapp.database.UserDatabase
 import com.example.asjapp.database.UserEntity
 import com.example.asjapp.login.token
+import com.example.asjapp.owner
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -25,7 +26,8 @@ interface API {
 
 
     @GET("/api/ngos/")
-    suspend fun getNgos(): Response<List<Ngo>>
+    suspend fun getNgos(@Query("owner") owner: String): Response<List<Ngo>>
+
 
     @GET("api/users/profile")
     suspend fun getProfile(@Header("Authorization") token: String): Response<User>
@@ -40,7 +42,7 @@ interface API {
     fun registerNgoOwner(@Body requestOwner: RequestOwner): retrofit2.Call<ResponseOwner>
 
     @POST("api/ngoOwners/login/")
-    fun loginNgoOwner(@Body userLogin: UserLogin):retrofit2.Call<LoginResponse>
+    fun loginNgoOwner(@Body userLogin: UserLogin): retrofit2.Call<LoginResponse>
 
     @PUT("/api/users/profile/joinNgo/")
     fun postJoinedNgo(

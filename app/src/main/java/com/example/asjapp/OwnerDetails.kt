@@ -1,5 +1,6 @@
 package com.example.asjapp
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,12 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.asjapp.database.UserDatabase
+import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentOwnerDetailsBinding
-import com.example.asjapp.databinding.FragmentRegisterBinding
 import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.RequestOwner
 import com.example.asjapp.retrofit.ResponseNgo
 import com.example.asjapp.retrofit.ResponseOwner
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -57,6 +61,20 @@ class OwnerDetails : Fragment() {
                     ) {
                         if(response.isSuccessful)
                         {
+                            GlobalScope.launch {
+                                context?.let {
+                                    val userDetails = UserEntity(
+                                        0,
+                                        response.body()?.name.toString(),
+                                        response.body()?.email.toString(),
+                                        "Enter bio".toString(),
+                                        response.body()?.token.toString(),
+                                        response.body()?._id!!.toString()
+                                    )
+                                    UserDatabase(it).getUserDao().addUser(userDetails)
+                                    isLoginFinished()
+                                }
+                            }
                             Log.d("test owner",response.body().toString())
                             Toast.makeText(activity,"Owner registered successfully", Toast.LENGTH_LONG).show()
                         }
@@ -65,6 +83,7 @@ class OwnerDetails : Fragment() {
                                 .show()
                             Log.d("test owner", response.body().toString())
                         }
+
                     }
 
                     override fun onFailure(call: Call<ResponseOwner>, t: Throwable) {
@@ -72,7 +91,9 @@ class OwnerDetails : Fragment() {
                     }
                   }
                 )
+
                 findNavController().navigate(R.id.action_ownerDetails_to_dashboardTab)
+
             }
             else
             {
@@ -81,6 +102,13 @@ class OwnerDetails : Fragment() {
 
         }
         return view;
+    }
+
+    private fun isLoginFinished(){
+        val sharedPref = requireActivity().getSharedPreferences("Login",Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished",true)
+        editor.apply()
     }
 
 }
