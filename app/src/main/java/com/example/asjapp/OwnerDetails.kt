@@ -74,8 +74,12 @@ class OwnerDetails : Fragment() {
                     }
                   }
                 )
+<<<<<<< HEAD
                 findNavController().navigate(R.id.action_ownerDetails_to_create_Ngo)
 
+=======
+                findNavController().navigate(R.id.action_ownerDetails_to_dashboardTab)
+>>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
             }
             else
             {

@@ -202,9 +202,6 @@
             app:popUpTo="@id/registerFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_registerFragment_to_create_Ngo"
-            app:destination="@id/create_Ngo" />
-        <action
             android:id="@+id/action_registerFragment_to_ownerDetails"
             app:destination="@id/ownerDetails" />
     </fragment>
@@ -223,11 +220,11 @@
         android:label="fragment_owner_details"
         tools:layout="@layout/fragment_owner_details" >
         <action
-            android:id="@+id/action_ownerDetails_to_create_Ngo"
-            app:destination="@id/create_Ngo" />
-        <action
             android:id="@+id/action_ownerDetails_to_ownerLoginFragment"
             app:destination="@id/ownerLoginFragment" />
+        <action
+            android:id="@+id/action_ownerDetails_to_dashboardTab"
+            app:destination="@id/dashboardTab" />
     </fragment>
     <fragment
         android:id="@+id/dashboardTab"
@@ -240,12 +237,18 @@
         <action
             android:id="@+id/action_dashboardTab_to_ngod"
             app:destination="@id/ngod" />
+<<<<<<< HEAD
         <argument
             android:name="ownerId"
             app:argType="string" />
         <action
             android:id="@+id/action_dashboardTab_to_ngod2"
             app:destination="@id/ngod" />
+=======
+        <action
+            android:id="@+id/action_dashboardTab_to_create_Ngo"
+            app:destination="@id/create_Ngo" />
+>>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
     </fragment>
     <fragment
         android:id="@+id/owner"
@@ -257,9 +260,18 @@
         android:name="com.example.asjapp.ngod"
         android:label="fragment_ngod"
         tools:layout="@layout/fragment_ngod" >
+<<<<<<< HEAD
         <argument
             android:name="ownerId"
             app:argType="integer" />
+=======
+        <action
+            android:id="@+id/action_ngod_to_create_Ngo"
+            app:destination="@id/create_Ngo" />
+        <action
+            android:id="@+id/action_ngod_to_ngoDetailsOwnerFragment"
+            app:destination="@id/ngoDetailsOwnerFragment" />
+>>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
     </fragment>
     <fragment
         android:id="@+id/ownerLoginFragment"
@@ -269,5 +281,20 @@
         <action
             android:id="@+id/action_ownerLoginFragment_to_dashboardTab"
             app:destination="@id/dashboardTab" />
+        <action
+            android:id="@+id/action_ownerLoginFragment_to_ownerDetails"
+            app:destination="@id/ownerDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/ngoDetailsOwnerFragment"
+        android:name="com.example.asjapp.ngoDetailsOwnerFragment"
+        android:label="fragment_ngo_details_owner"
+        tools:layout="@layout/fragment_ngo_details_owner" >
+        <argument
+            android:name="ngoName"
+            app:argType="string" />
+        <argument
+            android:name="ngoLocation"
+            app:argType="string" />
     </fragment>
 </navigation>

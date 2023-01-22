@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.example.asjapp.database.SessionManager
@@ -33,6 +34,7 @@ class owner : Fragment() {
         val view = binding.root
 
 
+
         sessionManager= SessionManager(requireContext())
         lifecycleScope.launchWhenCreated {
             val response = try {
@@ -48,10 +50,10 @@ class owner : Fragment() {
 
 
             if(response.isSuccessful && response.body()!=null){
-
+                binding.progressBar.visibility = View.GONE
                 Toast.makeText(activity, "Got it", Toast.LENGTH_SHORT).show()
-                binding.oname.text = response.body()!!.name.toString()
-                binding.oemail.text = response.body()!!.email.toString()
+                binding.oname.text = response.body()!!.name
+                binding.oemail.text = response.body()!!.email
                 binding.ousername.text = response.body()!!.username.toString()
                 binding.odob.text = response.body()!!.dob.toString()
                 binding.ojoineddate.text = response.body()!!.date_joined.toString()

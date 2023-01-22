@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".owner">
+    tools:context=".ngoDetailsOwnerFragment">
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -20,19 +20,21 @@
         app:layout_constraintVertical_bias="0.01">
 
 
+
         <TextView
-            android:id="@+id/textViefgs"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Username"
+            android:text="Name"
             android:textColor="@color/Dark_blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
 
+
         <TextView
-            android:id="@+id/ousername"
+            android:id="@+id/ngoname"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="5dp"
@@ -40,149 +42,151 @@
             android:ems="10"
             android:paddingStart="25dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Founder"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ngofounder"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:layout_marginBottom="5dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="Full Name"
-                android:textColor="@color/Dark_blue"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/oname"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
-            android:gravity=""
-            android:paddingStart="15dp"
-            android:textSize="18sp" />
+            android:paddingStart="25dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Tagline"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ngotagline"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:layout_marginBottom="5dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="Email"
-                android:textColor="@color/Dark_blue"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/oemail"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
             android:paddingStart="25dp" />
 
         <TextView
-            android:id="@+id/tertVfek"
+            android:id="@+id/textView74"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Date of Birth"
+            android:text="Description"
             android:textColor="@color/Dark_blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/odob"
+            android:id="@+id/ngodescription"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
             android:paddingStart="25dp" />
 
         <TextView
-            android:id="@+id/textVfek"
+            android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Joined Date"
+            android:text="Started on"
             android:textColor="@color/Dark_blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/ojoineddate"
+            android:id="@+id/ngostart"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
             android:paddingStart="25dp" />
 
         <TextView
-            android:id="@+id/texhyVfek"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Address"
+            android:text="Location"
             android:textColor="@color/Dark_blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/oaddress"
+            android:id="@+id/ngolocation"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
             android:paddingStart="25dp" />
 
         <TextView
-            android:id="@+id/tedtVfek"
+            android:id="@+id/textView85"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="City"
+            android:text="Contact"
             android:textColor="@color/Dark_blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/ocity"
+            android:id="@+id/ngocontact"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/shadow_button"
-            android:gravity="center"
+            android:ems="10"
+            android:paddingStart="25dp" />
+
+        <TextView
+            android:id="@+id/textViek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Reach out to us"
+            android:textColor="@color/Dark_blue"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ngoemail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shadow_button"
+            android:ems="10"
             android:paddingStart="25dp" />
 
 
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:progressDrawable="@drawable/progress_indicator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

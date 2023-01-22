@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+<<<<<<< HEAD
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
@@ -22,15 +23,28 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import java.io.IOException
+=======
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.asjapp.adapters.OwnerNgoAdapter
+import com.example.asjapp.databinding.FragmentNgodBinding
+import com.example.asjapp.databinding.FragmentOwnerDetailsBinding
+>>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
 
 
 private var _binding: FragmentNgodBinding? = null
 private val binding get() = _binding!!
 
 class ngod : Fragment() {
+<<<<<<< HEAD
     private lateinit var users: List<UserEntity>
     private lateinit var user: UserEntity
     private lateinit var id: String
+=======
+
+    lateinit var adapter: RecyclerView.Adapter<OwnerNgoAdapter.ViewHolder>
+>>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,6 +52,7 @@ class ngod : Fragment() {
         _binding = FragmentNgodBinding.inflate(inflater, container, false)
         val view = binding.root
 
+<<<<<<< HEAD
         GlobalScope.launch {
             context?.let {
 
@@ -77,6 +92,14 @@ class ngod : Fragment() {
 
 
         // Inflate the layout for this fragment
+=======
+        binding.recyclengo.apply {
+            adapter = OwnerNgoAdapter()
+            binding.recyclengo.adapter = adapter
+            layoutManager = LinearLayoutManager(context)
+        }
+
+>>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
         return view
     }
 
