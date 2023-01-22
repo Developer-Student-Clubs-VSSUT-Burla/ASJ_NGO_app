@@ -85,9 +85,7 @@ class RegisterFragment : Fragment() {
                 Toast.makeText(activity, "Enter All fields", Toast.LENGTH_SHORT).show()
             }
         }
-        binding.continue2.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_ownerDetails)
-        }
+
 
         binding.login.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)

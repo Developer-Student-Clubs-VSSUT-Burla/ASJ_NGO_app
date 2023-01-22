@@ -24,7 +24,7 @@ class SplashFragment : Fragment() {
                 if (isLoginFinished()) {
                     findNavController().navigate(R.id.action_splashFragment_to_tabbedFragment)
                 } else {
-                    findNavController().navigate(R.id.action_splashFragment_to_registerFragment)
+                    findNavController().navigate(R.id.action_splashFragment_to_choosePage)
                 }
             } else {
                 findNavController().navigate(R.id.action_splashFragment_to_onboardingPagerFragment)

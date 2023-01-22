@@ -33,6 +33,9 @@
             app:destination="@id/registerFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_choosePage"
+            app:destination="@id/choosePage" />
     </fragment>
     <fragment
         android:id="@+id/onboardingPagerFragment"
@@ -292,5 +295,17 @@
         <argument
             android:name="ngoLocation"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/choosePage"
+        android:name="com.example.asjapp.ChoosePage"
+        android:label="fragment_choose_page"
+        tools:layout="@layout/fragment_choose_page" >
+        <action
+            android:id="@+id/action_choosePage_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_choosePage_to_ownerDetails"
+            app:destination="@id/ownerDetails" />
     </fragment>
 </navigation>
