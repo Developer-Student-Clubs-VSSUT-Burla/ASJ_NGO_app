@@ -45,24 +45,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <EditText
-        android:id="@+id/founder"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/edit"
-        android:ems="10"
-        android:hint="NGO Founder Name"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColorHint="#546E7A"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/ngoname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actionbar" />
 
     <EditText
         android:id="@+id/location"
@@ -172,7 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/founder" />
+        app:layout_constraintTop_toBottomOf="@+id/actionbar" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/creatNgoButton"

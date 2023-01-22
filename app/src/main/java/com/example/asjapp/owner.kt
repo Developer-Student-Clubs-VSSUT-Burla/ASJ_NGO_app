@@ -46,6 +46,7 @@ class owner : Fragment() {
                 return@launchWhenCreated
             }
 
+
             if(response.isSuccessful && response.body()!=null){
 
                 Toast.makeText(activity, "Got it", Toast.LENGTH_SHORT).show()

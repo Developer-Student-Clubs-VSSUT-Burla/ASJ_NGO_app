@@ -57,11 +57,11 @@ class ngod : Fragment() {
                         return@withContext
                     }
                     if (response.isSuccessful && response.body() != null) {
-                        binding.ngoDetailsName.text= response.body()!![0].name
-                        binding.ngoDetailsLoc.text=response.body()!![0].location
-                        binding.ngoDetailsTagline.text=response.body()!![0].tagline
-                        binding.ngoStartedAt.text=response.body()!![0].startedAt.slice(0..9)
-                        binding.ngoDetails.text=response.body()!![0].desc
+//                        binding.ngoDetailsName.text= response.body()!![0].name
+//                        binding.ngoDetailsLoc.text=response.body()!![0].location
+//                        binding.ngoDetailsTagline.text=response.body()!![0].tagline
+//                        binding.ngoStartedAt.text=response.body()!![0].startedAt.slice(0..9)
+//                        binding.ngoDetails.text=response.body()!![0].desc
 
 
                     } else {

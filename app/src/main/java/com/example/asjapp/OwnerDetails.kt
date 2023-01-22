@@ -1,5 +1,6 @@
 package com.example.asjapp
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -65,6 +66,7 @@ class OwnerDetails : Fragment() {
                                 .show()
                             Log.d("test owner", response.body().toString())
                         }
+
                     }
 
                     override fun onFailure(call: Call<ResponseOwner>, t: Throwable) {
@@ -73,6 +75,7 @@ class OwnerDetails : Fragment() {
                   }
                 )
                 findNavController().navigate(R.id.action_ownerDetails_to_create_Ngo)
+
             }
             else
             {
@@ -81,6 +84,13 @@ class OwnerDetails : Fragment() {
 
         }
         return view;
+    }
+
+    private fun isLoginFinished(){
+        val sharedPref = requireActivity().getSharedPreferences("Login",Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished",true)
+        editor.apply()
     }
 
 }
