@@ -27,7 +27,7 @@ private val binding get() = _binding!!
 
 class NgoProfile : Fragment() {
 
-    private val args: NgoProfileArgs by navArgs()
+    private val args: NgoProfileArgs by this.navArgs()
     private lateinit var sessionManager: SessionManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

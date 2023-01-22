@@ -72,7 +72,7 @@ class OwnerDetails : Fragment() {
                     }
                   }
                 )
-                findNavController().navigate(R.id.action_ownerDetails_to_create_Ngo)
+                findNavController().navigate(R.id.action_ownerDetails_to_dashboardTab)
             }
             else
             {

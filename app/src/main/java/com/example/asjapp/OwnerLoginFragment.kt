@@ -33,6 +33,12 @@ class OwnerLoginFragment : Fragment() {
     ): View? {
         _binding = FragmentOwnerLoginBinding.inflate(inflater, container, false)
         val view = binding.root
+
+
+        binding.moveLogin.setOnClickListener{
+            findNavController().navigate(R.id.action_ownerLoginFragment_to_ownerDetails)
+        }
+
         sessionManager = SessionManager(requireContext())
         binding.ContinueBtn.setOnClickListener {
 
