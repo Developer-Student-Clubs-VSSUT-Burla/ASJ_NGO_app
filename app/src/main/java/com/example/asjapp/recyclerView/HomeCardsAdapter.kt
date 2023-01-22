@@ -57,7 +57,9 @@ class HomeCardsAdapter : RecyclerView.Adapter<HomeCardsAdapter.ItemViewHolder>()
                     ngo.tagline,
                     ngo.desc,
                     ngo.location,
-                    ngo._id
+                    ngo._id,
+                    ngo.contact,
+                    ngo.email
                 )
                 Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
             }

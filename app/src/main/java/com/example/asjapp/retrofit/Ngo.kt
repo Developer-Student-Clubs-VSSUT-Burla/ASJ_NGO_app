@@ -7,6 +7,8 @@ data class Ngo(
     val name: String,
     val ngo_owner: String,
     val startedAt: String,
-    val tagline: String
+    val tagline: String,
+    val contact:String,
+    val email:String
 
 )

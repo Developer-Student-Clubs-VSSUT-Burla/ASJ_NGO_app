@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bimage"
     android:padding="20dp"
     tools:context=".ChatFragment">
 
@@ -34,63 +33,96 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:shadowColor="@color/outline"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="2"
-                android:text="Chat Support"
-                android:textColor="@color/txt"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/message"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/contact"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actionbar" />
 
-    <EditText
-        android:id="@+id/message"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/send"
-        android:background="@drawable/custom_input"
-        android:hint="Message here..."
-        android:padding="15dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toTopOf="@+id/send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/send"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Contact Us"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:layout_editor_absoluteX="20dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/send"
-        app:elevation="0dp"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mailbtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_500"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/ic_baseline_arrow_upward_24"
-        app:fabCustomSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+
+            tools:layout_editor_absoluteX="20dp">
+
+            <TextView
+                android:id="@+id/ngoContactMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#575252"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:drawableRight="@drawable/ic_baseline_mail_24"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Mail" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/callbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/mailbtn">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+
+            tools:layout_editor_absoluteX="20dp">
+
+            <TextView
+                android:id="@+id/ngoContactPhn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#575252"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:drawableRight="@drawable/ic_baseline_call_24"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Phone No" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ class Screen3 : Fragment() {
         val view = binding.root
 
         binding.GetStart.setOnClickListener {
-            findNavController().navigate(R.id.action_onboardingPagerFragment_to_registerFragment)
+            findNavController().navigate(R.id.action_onboardingPagerFragment_to_choosePage)
             onBoardingFinished()
         }
 

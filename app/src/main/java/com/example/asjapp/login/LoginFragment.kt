@@ -119,7 +119,7 @@ class LoginFragment : Fragment() {
 
 
     private fun isLoginFinished() {
-        val sharedPref = requireActivity().getSharedPreferences("Login", Context.MODE_PRIVATE)
+        val sharedPref = requireActivity().getSharedPreferences("UserLogin", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.putBoolean("Finished", true)
         editor.apply()

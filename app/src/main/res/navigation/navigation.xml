@@ -33,6 +33,12 @@
             app:destination="@id/registerFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_choosePage"
+            app:destination="@id/choosePage" />
+        <action
+            android:id="@+id/action_splashFragment_to_dashboardTab"
+            app:destination="@id/dashboardTab" />
     </fragment>
     <fragment
         android:id="@+id/onboardingPagerFragment"
@@ -53,6 +59,9 @@
             app:destination="@id/registerFragment"
             app:popUpTo="@id/onboardingPagerFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardingPagerFragment_to_choosePage"
+            app:destination="@id/choosePage" />
     </fragment>
     <fragment
         android:id="@+id/tabbedFragment"
@@ -125,6 +134,12 @@
         <argument
             android:name="ngoId"
             app:argType="integer" />
+        <argument
+            android:name="ngoPhone"
+            app:argType="string" />
+        <argument
+            android:name="ngoMail"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/joinFragment"
@@ -147,6 +162,12 @@
             app:destination="@id/ngo_Profile"
             app:popUpTo="@id/ngo_Profile"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="ownerPhoneNo"
+            app:argType="string" />
+        <argument
+            android:name="ownerMailId"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/donateFragment"
@@ -247,6 +268,9 @@
         <action
             android:id="@+id/action_dashboardTab_to_create_Ngo"
             app:destination="@id/create_Ngo" />
+        <action
+            android:id="@+id/action_dashboardTab_to_ownerLoginFragment"
+            app:destination="@id/ownerLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/owner"
@@ -292,5 +316,17 @@
         <argument
             android:name="ngoLocation"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/choosePage"
+        android:name="com.example.asjapp.ChoosePage"
+        android:label="fragment_choose_page"
+        tools:layout="@layout/fragment_choose_page" >
+        <action
+            android:id="@+id/action_choosePage_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_choosePage_to_ownerDetails"
+            app:destination="@id/ownerDetails" />
     </fragment>
 </navigation>

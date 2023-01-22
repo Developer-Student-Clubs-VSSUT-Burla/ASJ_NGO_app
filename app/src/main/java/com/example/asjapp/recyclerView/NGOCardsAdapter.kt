@@ -60,7 +60,10 @@ class NGOCardsAdapter : RecyclerView.Adapter<NGOCardsAdapter.NGOViewHolder>() {
                     subNgo.desc,
                     subNgo.desc,
                     subNgo.location,
-                    subNgo._id
+                    subNgo._id,
+                    subNgo.contact,
+                    subNgo.email
+
                 )
                 Navigation.createNavigateOnClickListener(action).onClick(holder.itemView)
             }

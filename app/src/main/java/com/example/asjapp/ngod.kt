@@ -48,6 +48,7 @@ class ngod : Fragment() {
                 users = UserDatabase(it).getUserDao().getUser()
 
                 user = users.last()
+
                 id = user.uId
                 withContext(Dispatchers.Main)
                 {

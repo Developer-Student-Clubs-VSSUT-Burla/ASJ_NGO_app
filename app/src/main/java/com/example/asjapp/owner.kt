@@ -54,11 +54,9 @@ class owner : Fragment() {
                 Toast.makeText(activity, "Got it", Toast.LENGTH_SHORT).show()
                 binding.oname.text = response.body()!!.name
                 binding.oemail.text = response.body()!!.email
-                binding.ousername.text = response.body()!!.username.toString()
-                binding.odob.text = response.body()!!.dob.toString()
-                binding.ojoineddate.text = response.body()!!.date_joined.toString()
-                binding.oaddress.text = response.body()!!.address.toString()
-                binding.ocity.text = response.body()!!.city.toString()
+                binding.ousername.text = response.body()!!.username
+                binding.ojoineddate.text = response.body()!!.date_joined
+                binding.oaddress.text = response.body()!!.address
 
 
             }
@@ -66,6 +64,7 @@ class owner : Fragment() {
                 Log.e("TAG_Error","Response Not Successful")
             }
         }
+
 
         return view
     }

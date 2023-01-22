@@ -1,5 +1,6 @@
 package com.example.asjapp
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -77,6 +78,7 @@ class OwnerLoginFragment : Fragment() {
                                     response.body()?._id!!.toString()
                                 )
                             findNavController().navigate(action)
+                            isOwnerLoginFinished()
 
                         } else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)
@@ -94,6 +96,12 @@ class OwnerLoginFragment : Fragment() {
             }
         }
         return view
+    }
+    private fun isOwnerLoginFinished() {
+        val sharedPref = requireActivity().getSharedPreferences("OwnerLogin", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished", true)
+        editor.apply()
     }
 
 
