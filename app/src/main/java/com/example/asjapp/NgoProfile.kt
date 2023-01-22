@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.asjapp.database.SessionManager
@@ -88,7 +89,8 @@ class NgoProfile : Fragment() {
         }
 
         binding.ibChat.setOnClickListener {
-            findNavController().navigate(R.id.action_ngo_Profile_to_chatFragment)
+            val action = NgoProfileDirections.actionNgoProfileToChatFragment(args.ngoPhone,args.ngoMail)
+            Navigation.findNavController(view).navigate(action)
         }
 
         binding.ibMembers.setOnClickListener {

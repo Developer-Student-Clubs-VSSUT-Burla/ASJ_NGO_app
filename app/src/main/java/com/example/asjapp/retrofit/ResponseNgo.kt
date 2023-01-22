@@ -7,5 +7,6 @@ data class ResponseNgo(
     val name: String,
     val ngo_owner: String,
     val startedAt: String,
-    val tagline: String
+    val tagline: String,
+    val email:String
 )

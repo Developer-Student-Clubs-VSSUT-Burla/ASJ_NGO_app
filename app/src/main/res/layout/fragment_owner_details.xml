@@ -29,7 +29,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:fontFamily="@font/nunito_bold"
         android:text="Owner Details"
         android:textColor="@color/black"
@@ -53,7 +52,6 @@
         android:inputType="textEmailAddress"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/owner_name" />
 
@@ -62,7 +60,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginTop="104dp"
         android:background="@drawable/sign_rectangle"
         android:ems="10"
         android:fontFamily="@font/open_sans"
@@ -73,15 +70,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/owner_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/sign_rectangle"
         android:ems="10"
         android:fontFamily="@font/open_sans"
@@ -90,16 +85,32 @@
         android:inputType="textPassword"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/owner_email" />
+
+
+    <EditText
+        android:id="@+id/owner_address2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/sign_rectangle"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:hint="Enter Address"
+        android:inputType="text"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner_password" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/materialButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans"
         android:padding="20dp"
         android:text="Submit"
@@ -107,9 +118,8 @@
         android:textSize="16sp"
         app:cornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/owner_password" />
+        app:layout_constraintTop_toBottomOf="@+id/owner_address2" />
 
     <LinearLayout
         android:id="@+id/login"

@@ -38,7 +38,10 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
-            android:paddingStart="25dp" />
+            android:text="Username"
+            android:textColor="@color/black"
+            android:gravity="center|start"
+            android:paddingStart="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,9 +67,10 @@
             android:layout_height="48dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
-            android:gravity=""
-            android:paddingStart="15dp"
-            android:textSize="18sp" />
+            android:text="Name"
+            android:textColor="@color/black"
+            android:gravity="center|start"
+            android:paddingStart="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,26 +96,12 @@
             android:layout_height="48dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
-            android:paddingStart="25dp" />
-
-        <TextView
-            android:id="@+id/tertVfek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:text="Date of Birth"
-            android:textColor="@color/Dark_blue"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:text="Email"
+            android:textColor="@color/black"
+            android:gravity="center|start"
+            android:paddingStart="15dp" />
 
 
-        <TextView
-            android:id="@+id/odob"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/shadow_button"
-            android:ems="10"
-            android:paddingStart="25dp" />
 
         <TextView
             android:id="@+id/textVfek"
@@ -130,7 +120,10 @@
             android:layout_height="48dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
-            android:paddingStart="25dp" />
+            android:text="Joined Date"
+            android:textColor="@color/black"
+            android:gravity="center|start"
+            android:paddingStart="15dp" />
 
         <TextView
             android:id="@+id/texhyVfek"
@@ -149,26 +142,12 @@
             android:layout_height="48dp"
             android:background="@drawable/shadow_button"
             android:ems="10"
-            android:paddingStart="25dp" />
-
-        <TextView
-            android:id="@+id/tedtVfek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:text="City"
-            android:textColor="@color/Dark_blue"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:text="Hello"
+            android:textColor="@color/black"
+            android:gravity="center|start"
+            android:paddingStart="15dp" />
 
 
-        <TextView
-            android:id="@+id/ocity"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/shadow_button"
-            android:gravity="center"
-            android:paddingStart="25dp" />
 
 
     </LinearLayout>

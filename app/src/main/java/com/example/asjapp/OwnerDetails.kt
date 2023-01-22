@@ -31,8 +31,7 @@ class OwnerDetails : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View?
-    {
+    ): View? {
         _binding = FragmentOwnerDetailsBinding.inflate(inflater, container, false)
         val view = binding.root
 
@@ -40,27 +39,26 @@ class OwnerDetails : Fragment() {
             findNavController().navigate(R.id.action_ownerDetails_to_ownerLoginFragment)
         }
 
-        binding.materialButton.setOnClickListener{
-            if(binding.ownerName.text.toString().isNotEmpty() &&
+        binding.materialButton.setOnClickListener {
+            if (binding.ownerName.text.toString().isNotEmpty() &&
                 binding.ownerEmail.text.toString().isNotEmpty() &&
-                binding.ownerPassword.text.toString().isNotEmpty()
-            )
-            {
+                binding.ownerPassword.text.toString().isNotEmpty() &&
+                binding.ownerAddress2.text.toString().isNotEmpty()
+            ) {
                 val name = binding.ownerName.text.toString()
                 val email = binding.ownerEmail.text.toString()
                 val passsword = binding.ownerPassword.text.toString()
+                val address = binding.ownerAddress2.text.toString()
 
-                val owner = RequestOwner(name = name, email = email, password = passsword)
+                val owner = RequestOwner(name = name, email = email, password = passsword,address=address)
                 val ownerReponseCall = ApiClient.userService.registerNgoOwner(owner)
 
-                ownerReponseCall.enqueue(object : Callback<ResponseOwner>
-                {
+                ownerReponseCall.enqueue(object : Callback<ResponseOwner> {
                     override fun onResponse(
                         call: Call<ResponseOwner>,
                         response: Response<ResponseOwner>
                     ) {
-                        if(response.isSuccessful)
-                        {
+                        if (response.isSuccessful) {
                             GlobalScope.launch {
                                 context?.let {
                                     val userDetails = UserEntity(
@@ -72,13 +70,18 @@ class OwnerDetails : Fragment() {
                                         response.body()?._id!!.toString()
                                     )
                                     UserDatabase(it).getUserDao().addUser(userDetails)
-                                    isLoginFinished()
+                                    isOwnerLoginFinished()
                                 }
                             }
-                            Log.d("test owner",response.body().toString())
-                            Toast.makeText(activity,"Owner registered successfully", Toast.LENGTH_LONG).show()
-                        }
-                        else {
+                            Log.d("test owner", response.body().toString())
+                            Toast.makeText(
+                                activity,
+                                "Owner registered successfully",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            findNavController().navigate(R.id.action_ownerDetails_to_dashboardTab)
+
+                        } else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)
                                 .show()
                             Log.d("test owner", response.body().toString())
@@ -87,27 +90,24 @@ class OwnerDetails : Fragment() {
                     }
 
                     override fun onFailure(call: Call<ResponseOwner>, t: Throwable) {
-                        Toast.makeText(activity,"Something went wrong",Toast.LENGTH_LONG).show()
+                        Toast.makeText(activity, "Something went wrong", Toast.LENGTH_LONG).show()
                     }
-                  }
+                }
                 )
 
-                findNavController().navigate(R.id.action_ownerDetails_to_dashboardTab)
 
-            }
-            else
-            {
-                Toast.makeText(activity,"Fill up all the fields",Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(activity, "Fill up all the fields", Toast.LENGTH_LONG).show()
             }
 
         }
         return view;
     }
 
-    private fun isLoginFinished(){
-        val sharedPref = requireActivity().getSharedPreferences("Login",Context.MODE_PRIVATE)
+    private fun isOwnerLoginFinished() {
+        val sharedPref = requireActivity().getSharedPreferences("OwnerLogin", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
-        editor.putBoolean("Finished",true)
+        editor.putBoolean("Finished", true)
         editor.apply()
     }
 

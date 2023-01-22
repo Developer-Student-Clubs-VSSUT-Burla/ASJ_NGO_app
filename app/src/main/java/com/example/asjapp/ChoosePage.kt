@@ -27,10 +27,10 @@ class ChoosePage : Fragment() {
         val view = binding.root
 
         binding.linearLayout2.setOnClickListener {
-            findNavController().navigate(R.id.action_choosePage_to_registerFragment)
+            findNavController().navigate(R.id.action_choosePage_to_ownerDetails)
         }
         binding.linearLayout3.setOnClickListener {
-            findNavController().navigate(R.id.action_choosePage_to_ownerDetails)
+            findNavController().navigate(R.id.action_choosePage_to_registerFragment)
         }
 
         return view

@@ -22,7 +22,11 @@ class SplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             if (onBoardingFinished()) {
                 if (isLoginFinished()) {
+
                     findNavController().navigate(R.id.action_splashFragment_to_tabbedFragment)
+                } else if (isOwnerLoginFinished()) {
+                    findNavController().navigate(R.id.action_splashFragment_to_dashboardTab)
+
                 } else {
                     findNavController().navigate(R.id.action_splashFragment_to_choosePage)
                 }
@@ -40,7 +44,12 @@ class SplashFragment : Fragment() {
     }
 
     private fun isLoginFinished(): Boolean {
-        val sharedPref = requireActivity().getSharedPreferences("Login", Context.MODE_PRIVATE)
+        val sharedPref = requireActivity().getSharedPreferences("UserLogin", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
+    }
+
+    private fun isOwnerLoginFinished(): Boolean {
+        val sharedPref = requireActivity().getSharedPreferences("OwnerLogin", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished", false)
     }
 }

@@ -105,20 +105,20 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/open_sans_light"
-                    android:text="@string/join_now"
-                    android:textAllCaps="false"
-                    android:textColor="@color/purple_500"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:backgroundTint="@color/white"
-                    app:cornerRadius="10dp"
-                    tools:ignore="TextContrastCheck" />
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:fontFamily="@font/open_sans_light"-->
+<!--                    android:text="@string/join_now"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/purple_500"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:backgroundTint="@color/white"-->
+<!--                    app:cornerRadius="10dp"-->
+<!--                    tools:ignore="TextContrastCheck" />-->
 
             </LinearLayout>
 
