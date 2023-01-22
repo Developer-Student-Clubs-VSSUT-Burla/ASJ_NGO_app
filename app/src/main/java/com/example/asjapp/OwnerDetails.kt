@@ -9,12 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.asjapp.database.UserDatabase
+import com.example.asjapp.database.UserEntity
 import com.example.asjapp.databinding.FragmentOwnerDetailsBinding
-import com.example.asjapp.databinding.FragmentRegisterBinding
 import com.example.asjapp.retrofit.ApiClient
 import com.example.asjapp.retrofit.RequestOwner
 import com.example.asjapp.retrofit.ResponseNgo
 import com.example.asjapp.retrofit.ResponseOwner
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -58,6 +61,20 @@ class OwnerDetails : Fragment() {
                     ) {
                         if(response.isSuccessful)
                         {
+                            GlobalScope.launch {
+                                context?.let {
+                                    val userDetails = UserEntity(
+                                        0,
+                                        response.body()?.name.toString(),
+                                        response.body()?.email.toString(),
+                                        "Enter bio".toString(),
+                                        response.body()?.token.toString(),
+                                        response.body()?._id!!.toString()
+                                    )
+                                    UserDatabase(it).getUserDao().addUser(userDetails)
+                                    isLoginFinished()
+                                }
+                            }
                             Log.d("test owner",response.body().toString())
                             Toast.makeText(activity,"Owner registered successfully", Toast.LENGTH_LONG).show()
                         }
@@ -74,12 +91,9 @@ class OwnerDetails : Fragment() {
                     }
                   }
                 )
-<<<<<<< HEAD
-                findNavController().navigate(R.id.action_ownerDetails_to_create_Ngo)
 
-=======
                 findNavController().navigate(R.id.action_ownerDetails_to_dashboardTab)
->>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
+
             }
             else
             {

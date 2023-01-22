@@ -37,7 +37,6 @@ class Create_Ngo : Fragment()
         _binding = FragmentCreateNgoBinding.inflate(inflater,container,false)
         val view = binding.root
 
-<<<<<<< HEAD
         GlobalScope.launch {
             context?.let {
 
@@ -47,12 +46,10 @@ class Create_Ngo : Fragment()
                 id = user.uId
             }
         }
-=======
         binding.backto.setOnClickListener{
             findNavController().navigate(R.id.action_create_Ngo_to_dashboardTab)
         }
 
->>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
         binding.creatNgoButton.setOnClickListener()
         {
             if(binding.ngoname.text.toString().isNotEmpty() &&
@@ -82,6 +79,7 @@ class Create_Ngo : Fragment()
                         {
                             Log.d("test", response.body().toString())
                             Toast.makeText(activity,"Data submitted successfully",Toast.LENGTH_LONG).show()
+                            findNavController().navigate(R.id.action_create_Ngo_to_dashboardTab)
                         }
                         else {
                             Toast.makeText(activity, "Invalid Credentials", Toast.LENGTH_SHORT)
@@ -94,7 +92,7 @@ class Create_Ngo : Fragment()
                     }
                 }
               )
-              findNavController().navigate(R.id.action_create_Ngo_to_dashboardTab)
+
 
             }
             else

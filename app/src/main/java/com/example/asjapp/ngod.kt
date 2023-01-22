@@ -6,45 +6,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD
-import android.widget.Toast
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.navArgs
 import com.example.asjapp.database.UserDatabase
 import com.example.asjapp.database.UserEntity
-import com.example.asjapp.databinding.FragmentNgodBinding
 import com.example.asjapp.fragments.TAG
-import com.example.asjapp.login.token
 import com.example.asjapp.retrofit.ApiClient
-import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import java.io.IOException
-=======
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asjapp.adapters.OwnerNgoAdapter
 import com.example.asjapp.databinding.FragmentNgodBinding
-import com.example.asjapp.databinding.FragmentOwnerDetailsBinding
->>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
-
+import com.example.asjapp.ownerNgo.OwnerOwnNgoAdapter
 
 private var _binding: FragmentNgodBinding? = null
+private lateinit var OwnerOwnNgoAdapter: OwnerOwnNgoAdapter
 private val binding get() = _binding!!
 
 class ngod : Fragment() {
-<<<<<<< HEAD
     private lateinit var users: List<UserEntity>
     private lateinit var user: UserEntity
     private lateinit var id: String
-=======
+
 
     lateinit var adapter: RecyclerView.Adapter<OwnerNgoAdapter.ViewHolder>
->>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,7 +41,7 @@ class ngod : Fragment() {
         _binding = FragmentNgodBinding.inflate(inflater, container, false)
         val view = binding.root
 
-<<<<<<< HEAD
+
         GlobalScope.launch {
             context?.let {
 
@@ -72,12 +61,7 @@ class ngod : Fragment() {
                         return@withContext
                     }
                     if (response.isSuccessful && response.body() != null) {
-//                        binding.ngoDetailsName.text= response.body()!![0].name
-//                        binding.ngoDetailsLoc.text=response.body()!![0].location
-//                        binding.ngoDetailsTagline.text=response.body()!![0].tagline
-//                        binding.ngoStartedAt.text=response.body()!![0].startedAt.slice(0..9)
-//                        binding.ngoDetails.text=response.body()!![0].desc
-
+                        OwnerOwnNgoAdapter.ownNgo=response.body()!!
 
                     } else {
                         Log.e("TAG_Error", "Response Not Successful")
@@ -92,15 +76,20 @@ class ngod : Fragment() {
 
 
         // Inflate the layout for this fragment
-=======
         binding.recyclengo.apply {
             adapter = OwnerNgoAdapter()
             binding.recyclengo.adapter = adapter
             layoutManager = LinearLayoutManager(context)
         }
+        setupRecyclerView()
 
->>>>>>> 03c438e975409aa2f16420a3c2eefb0e6ae0f787
         return view
+    }
+
+    private fun setupRecyclerView()= binding.recyclengo.apply {
+        OwnerOwnNgoAdapter = OwnerOwnNgoAdapter()
+        adapter= OwnerOwnNgoAdapter
+        layoutManager=LinearLayoutManager(context)
     }
 
 }
