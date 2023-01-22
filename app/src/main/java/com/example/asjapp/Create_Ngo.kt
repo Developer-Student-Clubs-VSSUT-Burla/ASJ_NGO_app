@@ -28,6 +28,10 @@ class Create_Ngo : Fragment()
         _binding = FragmentCreateNgoBinding.inflate(inflater,container,false)
         val view = binding.root
 
+        binding.backto.setOnClickListener{
+            findNavController().navigate(R.id.action_create_Ngo_to_dashboardTab)
+        }
+
         binding.creatNgoButton.setOnClickListener()
         {
             if(binding.founder.text.toString().isNotEmpty() &&
