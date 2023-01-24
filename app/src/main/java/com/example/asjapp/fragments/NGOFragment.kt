@@ -23,7 +23,7 @@ import retrofit2.HttpException
 import java.io.IOException
 
 private lateinit var ngoBinding: FragmentNgoBinding
-private lateinit var NGOCardsAdapter:NGOCardsAdapter
+private lateinit var NGOCardsAdapter: NGOCardsAdapter
 private val binding get() = ngoBinding!!
 
 
@@ -42,26 +42,25 @@ class NGOFragment : Fragment() {
         val view = binding.root
 
 
-        sessionManager=SessionManager(requireContext())
+        sessionManager = SessionManager(requireContext())
         lifecycleScope.launchWhenCreated {
             val response = try {
                 Log.d("Response_Subs_List", sessionManager.fetchAuthToken().toString())
                 ApiClient.userService.getProfile(token = "Bearer ${sessionManager.fetchAuthToken()}")
-            }catch (e:IOException){
-                Log.e(TAG,"IOException, you might not have Internet Connection")
+            } catch (e: IOException) {
+                Log.e(TAG, "IOException, you might not have Internet Connection")
                 return@launchWhenCreated
-            }catch (e:HttpException){
-                Log.e(TAG,"HttpException,unexpected response")
+            } catch (e: HttpException) {
+                Log.e(TAG, "HttpException,unexpected response")
                 return@launchWhenCreated
             }
 
-            if(response.isSuccessful && response.body()!=null){
+            if (response.isSuccessful && response.body() != null) {
 
-                NGOCardsAdapter.subNgo=response.body()!!.subscribedNgos
+                NGOCardsAdapter.subNgo = response.body()!!.subscribedNgos
 
-            }
-            else{
-                Log.e("TAG_Error","Response Not Successful")
+            } else {
+                Log.e("TAG_Error", "Response Not Successful")
             }
         }
         setupRecyclerView()
@@ -71,17 +70,18 @@ class NGOFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        GlobalScope.launch{
+        GlobalScope.launch {
             context?.let {
-                users= UserDatabase(it).getUserDao().getUser()
-                user=users.last()
+                users = UserDatabase(it).getUserDao().getUser()
+//                user = users.last()!!
             }
         }
     }
-    private fun setupRecyclerView()= binding.ngoCards.apply {
-        NGOCardsAdapter= NGOCardsAdapter()
-        adapter=NGOCardsAdapter
-        layoutManager=LinearLayoutManager(context)
+
+    private fun setupRecyclerView() = binding.ngoCards.apply {
+        NGOCardsAdapter = NGOCardsAdapter()
+        adapter = NGOCardsAdapter
+        layoutManager = LinearLayoutManager(context)
     }
 
 
